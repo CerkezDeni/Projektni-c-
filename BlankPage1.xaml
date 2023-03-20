@@ -1,5 +1,5 @@
 ﻿<Page
-    x:Class="Projektni.MainPage"
+    x:Class="Projektni.BlankPage1"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:Projektni"
@@ -9,7 +9,6 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <Button x:Name="start" Content="START" Margin="0,248,0,0" VerticalAlignment="Top" Height="168" Width="382" HorizontalAlignment="Center" FontSize="80" Click="start_Click"/>
 
     </Grid>
 </Page>

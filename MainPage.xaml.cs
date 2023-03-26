@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using Windows.ApplicationModel.Core;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI;
@@ -28,9 +29,27 @@ namespace Projektni
             this.InitializeComponent();
         }
 
-        private void start_Click(object sender, RoutedEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(BlankPage1));
+            //nova igra
+            this.Frame.Navigate(typeof(BlankPage1));
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            //nastavi igru
+            this.Frame.Navigate(typeof(BlankPage1));
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            //liderbord
+        }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            //izađi iz igre
+            CoreApplication.Exit();
         }
     }
 }

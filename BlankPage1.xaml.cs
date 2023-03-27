@@ -45,11 +45,11 @@ namespace Projektni
             await Task.Run(async () =>
             {
                 
-                while (!cancellationTokenSource.IsCancellationRequested || destroy==false)
+                while (destroy==false)
                 {
                     if(min==60)
                     {
-                        timeraaa.Text = "EXPIRED";
+                        sec--;
                         destroy= true;
                     }
                     if (e == true)
@@ -87,12 +87,8 @@ namespace Projektni
                     await Task.Delay(1000);
                 }
             }, cancellationTokenSource.Token);
-        }
-
-        protected override void OnNavigatingFrom(NavigatingCancelEventArgs e)
-        {
-            cancellationTokenSource.Cancel();
-            base.OnNavigatingFrom(e);
+            timeraaa.FontSize = 100;
+            timeraaa.Text = "nigga💀";
         }
     }
 }

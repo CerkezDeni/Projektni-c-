@@ -14,13 +14,13 @@
                 <Image Source="Assets/smiley.png" Stretch="Fill"/>
             </StackPanel>
         </Button>
-        <Button Content="Button" Margin="560,258,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="610,258,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="660,258,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="710,258,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="760,258,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="810,258,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="860,258,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb1" Content="Button" Margin="560,258,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb2" Content="Button" Margin="610,258,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb3" Content="Button" Margin="660,258,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb4" Content="Button" Margin="710,258,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb5" Content="Button" Margin="760,258,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb6" Content="Button" Margin="810,258,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb7" Content="Button" Margin="860,258,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
         <Button Content="Button" Margin="910,258,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
         <Button Content="Button" Margin="960,258,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
         <Button Content="Button" Margin="1010,258,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
@@ -272,7 +272,7 @@
         <Button Content="Button" Margin="1310,1008,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
         <Image HorizontalAlignment="Left" Height="210" Margin="-29,20,0,0" VerticalAlignment="Top" Width="210" Source="Assets/flag.png" Stretch="Fill"/>
         <TextBlock x:Name="flagnumberdisplay" HorizontalAlignment="Left" Margin="144,28,0,0" TextWrapping="Wrap" Text="40" VerticalAlignment="Top" Height="179" Width="249" FontSize="150"/>
-        <TextBlock x:Name="timeraaa" HorizontalAlignment="Left" Margin="1529,28,0,0" TextWrapping="Wrap" Text="00:00" VerticalAlignment="Top" Height="196" Width="374" FontSize="150" SelectionChanged="timer_SelectionChanged"/>
+        <TextBlock x:Name="timeraaa" HorizontalAlignment="Left" Margin="1529,28,0,0" TextWrapping="Wrap" Text="00:00" VerticalAlignment="Top" Height="400" Width="374" FontSize="150" SelectionChanged="timer_SelectionChanged"/>
 
     </Grid>
 </Page>

@@ -20,12 +20,11 @@ namespace Projektni
 {
     public sealed partial class BlankPage1 : Page
     {
-        private CancellationTokenSource cancellationTokenSource;
+        
 
         public BlankPage1()
         {
             this.InitializeComponent();
-            cancellationTokenSource = new CancellationTokenSource();
             CreateBackgroundThread();
         }
 
@@ -86,9 +85,14 @@ namespace Projektni
                     });
                     await Task.Delay(1000);
                 }
-            }, cancellationTokenSource.Token);
+            });
             timeraaa.FontSize = 100;
             timeraaa.Text = "nigga💀";
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

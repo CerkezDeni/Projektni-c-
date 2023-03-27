@@ -134,8 +134,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\flag.png" />
+    <Content Include="Assets\flagico.png" />
     <Content Include="Assets\pozadina1.jpeg" />
     <Content Include="Assets\smiley.png" />
+    <Content Include="Assets\tile.png" />
+    <Content Include="Assets\tileclicked.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />

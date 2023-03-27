@@ -14,9 +14,9 @@
                 <Image Source="Assets/smiley.png" Stretch="Fill"/>
             </StackPanel>
         </Button>
-        <Button x:Name="Gumb1" Content="Button" Margin="560,258,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button x:Name="Gumb2" Content="Button" Margin="610,258,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button x:Name="Gumb3" Content="Button" Margin="660,258,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb1" Content="Button" Margin="560,258,0,0" VerticalAlignment="Top" Width="50" Height="50" PointerPressed="Button_PointerPressed"/>
+        <Button x:Name="Gumb2" Content="Button" Margin="610,258,0,0" VerticalAlignment="Top" Width="50" Height="50" PointerPressed="Button_PointerPressed"/>
+        <Button x:Name="Gumb3" Content="Button" Margin="660,258,0,0" VerticalAlignment="Top" Width="50" Height="50" PointerPressed="Button_PointerPressed"/>
         <Button x:Name="Gumb4" Content="Button" Margin="710,258,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
         <Button x:Name="Gumb5" Content="Button" Margin="760,258,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
         <Button x:Name="Gumb6" Content="Button" Margin="810,258,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
@@ -76,7 +76,7 @@
         <Button x:Name="Gumb60" Content="Button" Margin="1110,408,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
         <Button x:Name="Gumb61" Content="Button" Margin="1160,408,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
         <Button x:Name="Gumb62" Content="Button" Margin="1210,408,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button x:Name="Gumb63" Content="Button" Margin="1260,408,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="Button_Click"/>
+        <Button x:Name="Gumb63" Content="Button" Margin="1260,408,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
         <Button x:Name="Gumb64" Content="Button" Margin="1310,408,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
         <Button x:Name="Gumb65" Content="Button" Margin="560,458,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
         <Button x:Name="Gumb66" Content="Button" Margin="610,458,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
@@ -86,190 +86,190 @@
         <Button x:Name="Gumb70" Content="Button" Margin="810,458,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
         <Button x:Name="Gumb71" Content="Button" Margin="860,458,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
         <Button x:Name="Gumb72" Content="Button" Margin="910,458,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="960,458,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="1010,458,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="1060,458,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="1110,458,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="1160,458,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="1210,458,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="1260,458,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="1310,458,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="560,508,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="610,508,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="660,508,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="710,508,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="760,508,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="810,508,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="860,508,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="910,508,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="960,508,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="1010,508,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="1060,508,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="1110,508,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="1160,508,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="1210,508,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="1260,508,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="1310,508,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="560,558,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="610,558,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="660,558,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="710,558,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="760,558,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="810,558,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="860,558,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="910,558,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="960,558,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="1010,558,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="1060,558,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="1110,558,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="1160,558,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="1210,558,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="1260,558,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="1310,558,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="560,608,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="610,608,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="660,608,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="710,608,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="760,608,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="810,608,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="860,608,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="910,608,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="960,608,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="1010,608,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="1060,608,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="1110,608,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="1160,608,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="1210,608,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="1260,608,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="1310,608,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="560,658,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="610,658,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="660,658,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="710,658,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="760,658,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="810,658,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="860,658,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="910,658,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="960,658,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="1010,658,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="1060,658,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="1110,658,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="1160,658,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="1210,658,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="1260,658,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="1310,658,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="560,708,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="610,708,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="660,708,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="710,708,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="760,708,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="810,708,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="860,708,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="910,708,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="960,708,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="1010,708,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="1060,708,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="1110,708,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="1160,708,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="1210,708,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="1260,708,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="1310,708,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="560,758,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="610,758,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="660,758,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="710,758,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="760,758,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="810,758,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="860,758,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="910,758,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="960,758,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="1010,758,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="1060,758,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="1110,758,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="1160,758,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="1210,758,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="1260,758,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="1310,758,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="560,808,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="610,808,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="660,808,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="710,808,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="760,808,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="810,808,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="860,808,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="910,808,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="960,808,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="1010,808,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="1060,808,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="1110,808,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="1160,808,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="1210,808,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="1260,808,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="1310,808,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="560,858,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="610,858,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="660,858,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="710,858,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="760,858,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="810,858,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="860,858,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="910,858,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="960,858,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="1010,858,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="1060,858,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="1110,858,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="1160,858,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="1210,858,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="1260,858,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="1310,858,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="560,908,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="610,908,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="660,908,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="710,908,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="760,908,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="810,908,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="860,908,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="910,908,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="960,908,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="1010,908,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="1060,908,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="1110,908,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="1160,908,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="1210,908,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="1260,908,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="1310,908,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="560,958,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="610,958,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="660,958,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="710,958,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="760,958,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="810,958,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="860,958,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="910,958,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="960,958,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="1010,958,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="1060,958,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="1110,958,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="1160,958,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="1210,958,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="1260,958,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="1310,958,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="560,1008,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="610,1008,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="660,1008,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="710,1008,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="760,1008,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="810,1008,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="860,1008,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="910,1008,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="960,1008,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="1010,1008,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="1060,1008,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="1110,1008,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="1160,1008,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="1210,1008,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="1260,1008,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Button" Margin="1310,1008,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb73" Content="Button" Margin="960,458,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb74" Content="Button" Margin="1010,458,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb75" Content="Button" Margin="1060,458,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb76" Content="Button" Margin="1110,458,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb77" Content="Button" Margin="1160,458,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb78" Content="Button" Margin="1210,458,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb79" Content="Button" Margin="1260,458,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb80" Content="Button" Margin="1310,458,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb81" Content="Button" Margin="560,508,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb82" Content="Button" Margin="610,508,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb83" Content="Button" Margin="660,508,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb84" Content="Button" Margin="710,508,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb85" Content="Button" Margin="760,508,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb86" Content="Button" Margin="810,508,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb87" Content="Button" Margin="860,508,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb88" Content="Button" Margin="910,508,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb89" Content="Button" Margin="960,508,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb90" Content="Button" Margin="1010,508,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb91" Content="Button" Margin="1060,508,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb92" Content="Button" Margin="1110,508,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb93" Content="Button" Margin="1160,508,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb94" Content="Button" Margin="1210,508,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb95" Content="Button" Margin="1260,508,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb96" Content="Button" Margin="1310,508,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb97" Content="Button" Margin="560,558,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb98" Content="Button" Margin="610,558,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb99" Content="Button" Margin="660,558,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb100" Content="Button" Margin="710,558,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb101" Content="Button" Margin="760,558,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb102" Content="Button" Margin="810,558,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb103" Content="Button" Margin="860,558,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb104" Content="Button" Margin="910,558,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb105" Content="Button" Margin="960,558,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb106" Content="Button" Margin="1010,558,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb107" Content="Button" Margin="1060,558,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb108" Content="Button" Margin="1110,558,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb109" Content="Button" Margin="1160,558,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb110" Content="Button" Margin="1210,558,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb111" Content="Button" Margin="1260,558,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb112" Content="Button" Margin="1310,558,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb113" Content="Button" Margin="560,608,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb114" Content="Button" Margin="610,608,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb115" Content="Button" Margin="660,608,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb116" Content="Button" Margin="710,608,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb117" Content="Button" Margin="760,608,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb118" Content="Button" Margin="810,608,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb119" Content="Button" Margin="860,608,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb120" Content="Button" Margin="910,608,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb121" Content="Button" Margin="960,608,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb122" Content="Button" Margin="1010,608,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb123" Content="Button" Margin="1060,608,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb124" Content="Button" Margin="1110,608,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb125" Content="Button" Margin="1160,608,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb126" Content="Button" Margin="1210,608,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb127" Content="Button" Margin="1260,608,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb128" Content="Button" Margin="1310,608,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb129" Content="Button" Margin="560,658,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb130" Content="Button" Margin="610,658,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb131" Content="Button" Margin="660,658,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb132" Content="Button" Margin="710,658,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb133" Content="Button" Margin="760,658,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb134" Content="Button" Margin="810,658,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb135" Content="Button" Margin="860,658,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb136" Content="Button" Margin="910,658,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb137" Content="Button" Margin="960,658,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb138" Content="Button" Margin="1010,658,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb139" Content="Button" Margin="1060,658,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb140" Content="Button" Margin="1110,658,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb141" Content="Button" Margin="1160,658,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb142" Content="Button" Margin="1210,658,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb143" Content="Button" Margin="1260,658,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb144" Content="Button" Margin="1310,658,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb145" Content="Button" Margin="560,708,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb146" Content="Button" Margin="610,708,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb147" Content="Button" Margin="660,708,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb148" Content="Button" Margin="710,708,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb149" Content="Button" Margin="760,708,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb150" Content="Button" Margin="810,708,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb151" Content="Button" Margin="860,708,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb152" Content="Button" Margin="910,708,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb153" Content="Button" Margin="960,708,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb154" Content="Button" Margin="1010,708,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb155" Content="Button" Margin="1060,708,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb156" Content="Button" Margin="1110,708,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb157" Content="Button" Margin="1160,708,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb158" Content="Button" Margin="1210,708,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb159" Content="Button" Margin="1260,708,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb160" Content="Button" Margin="1310,708,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb161" Content="Button" Margin="560,758,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb162" Content="Button" Margin="610,758,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb163" Content="Button" Margin="660,758,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb164" Content="Button" Margin="710,758,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb165" Content="Button" Margin="760,758,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb166" Content="Button" Margin="810,758,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb167" Content="Button" Margin="860,758,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb168" Content="Button" Margin="910,758,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb169" Content="Button" Margin="960,758,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb170" Content="Button" Margin="1010,758,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb171" Content="Button" Margin="1060,758,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb172" Content="Button" Margin="1110,758,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb173" Content="Button" Margin="1160,758,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb174" Content="Button" Margin="1210,758,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb175" Content="Button" Margin="1260,758,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb176" Content="Button" Margin="1310,758,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb177" Content="Button" Margin="560,808,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb178" Content="Button" Margin="610,808,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb179" Content="Button" Margin="660,808,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb180" Content="Button" Margin="710,808,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb181" Content="Button" Margin="760,808,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb182" Content="Button" Margin="810,808,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb183" Content="Button" Margin="860,808,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb184" Content="Button" Margin="910,808,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb185" Content="Button" Margin="960,808,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb186" Content="Button" Margin="1010,808,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb187" Content="Button" Margin="1060,808,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb188" Content="Button" Margin="1110,808,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb189" Content="Button" Margin="1160,808,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb190" Content="Button" Margin="1210,808,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb191" Content="Button" Margin="1260,808,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb192" Content="Button" Margin="1310,808,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb193" Content="Button" Margin="560,858,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb194" Content="Button" Margin="610,858,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb195" Content="Button" Margin="660,858,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb196" Content="Button" Margin="710,858,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb197" Content="Button" Margin="760,858,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb198" Content="Button" Margin="810,858,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb199" Content="Button" Margin="860,858,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb200" Content="Button" Margin="910,858,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb201" Content="Button" Margin="960,858,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb202" Content="Button" Margin="1010,858,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb203" Content="Button" Margin="1060,858,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb204" Content="Button" Margin="1110,858,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb205" Content="Button" Margin="1160,858,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb206" Content="Button" Margin="1210,858,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb207" Content="Button" Margin="1260,858,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb208" Content="Button" Margin="1310,858,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb209" Content="Button" Margin="560,908,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb210" Content="Button" Margin="610,908,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb211" Content="Button" Margin="660,908,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb212" Content="Button" Margin="710,908,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb213" Content="Button" Margin="760,908,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb214" Content="Button" Margin="810,908,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb215" Content="Button" Margin="860,908,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb216" Content="Button" Margin="910,908,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb217" Content="Button" Margin="960,908,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb218" Content="Button" Margin="1010,908,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb219" Content="Button" Margin="1060,908,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb220" Content="Button" Margin="1110,908,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb221" Content="Button" Margin="1160,908,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb222" Content="Button" Margin="1210,908,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb223" Content="Button" Margin="1260,908,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb224" Content="Button" Margin="1310,908,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb225" Content="Button" Margin="560,958,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb226" Content="Button" Margin="610,958,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb227" Content="Button" Margin="660,958,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb228" Content="Button" Margin="710,958,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb229" Content="Button" Margin="760,958,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb230" Content="Button" Margin="810,958,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb231" Content="Button" Margin="860,958,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb232" Content="Button" Margin="910,958,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb233" Content="Button" Margin="960,958,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb234" Content="Button" Margin="1010,958,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb235" Content="Button" Margin="1060,958,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb236" Content="Button" Margin="1110,958,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb237" Content="Button" Margin="1160,958,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb238" Content="Button" Margin="1210,958,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb239" Content="Button" Margin="1260,958,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb240" Content="Button" Margin="1310,958,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb241" Content="Button" Margin="560,1008,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb242" Content="Button" Margin="610,1008,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb243" Content="Button" Margin="660,1008,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb244" Content="Button" Margin="710,1008,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb245" Content="Button" Margin="760,1008,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb246" Content="Button" Margin="810,1008,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb247" Content="Button" Margin="860,1008,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb248" Content="Button" Margin="910,1008,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb249" Content="Button" Margin="960,1008,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb250" Content="Button" Margin="1010,1008,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb251" Content="Button" Margin="1060,1008,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb252" Content="Button" Margin="1110,1008,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb253" Content="Button" Margin="1160,1008,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb254" Content="Button" Margin="1210,1008,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb255" Content="Button" Margin="1260,1008,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="Gumb256" Content="Button" Margin="1310,1008,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
         <Image HorizontalAlignment="Left" Height="210" Margin="-29,20,0,0" VerticalAlignment="Top" Width="210" Source="Assets/flag.png" Stretch="Fill"/>
         <TextBlock x:Name="flagnumberdisplay" HorizontalAlignment="Left" Margin="144,28,0,0" TextWrapping="Wrap" Text="40" VerticalAlignment="Top" Height="179" Width="249" FontSize="150"/>
         <TextBlock x:Name="timeraaa" HorizontalAlignment="Left" Margin="1529,28,0,0" TextWrapping="Wrap" Text="00:00" VerticalAlignment="Top" Height="400" Width="374" FontSize="150" SelectionChanged="timer_SelectionChanged"/>

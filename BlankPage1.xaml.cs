@@ -15,17 +15,37 @@ using Windows.UI.Xaml.Navigation;
 using System.Threading;
 using System.Threading.Tasks;
 using Windows.System.Threading;
+using Windows.UI.Xaml.Media.Imaging;
 
 namespace Projektni
 {
     public sealed partial class BlankPage1 : Page
     {
-        
 
+        int rightclick = 0;
+        int leftclick = 0;
         public BlankPage1()
         {
             this.InitializeComponent();
             CreateBackgroundThread();
+            SetImageForAllButtons();
+        }
+
+        private void SetImageForAllButtons()
+        {
+            string imagePath = "ms-appx:///Assets/tile.png";
+            for (int i = 1; i <= 256; i++)
+            {
+                string buttonName = "Gumb" + i;
+                Button button = FindName(buttonName) as Button;
+                if (button != null)
+                {
+                    button.Content = null;
+                    ImageBrush imageBrush = new ImageBrush();
+                    imageBrush.ImageSource = new BitmapImage(new Uri(imagePath));
+                    button.Background = imageBrush;
+                }
+            }
         }
 
         private void timer_SelectionChanged(object sender, RoutedEventArgs e)
@@ -89,11 +109,22 @@ namespace Projektni
             timeraaa.FontSize = 100;
             timeraaa.Text = "nigga💀";
         }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Button_PointerPressed(object sender, PointerRoutedEventArgs e)
         {
-
+            if (e.Pointer.PointerDeviceType == Windows.Devices.Input.PointerDeviceType.Mouse)
+            {
+                var properties = e.GetCurrentPoint(sender as UIElement).Properties;
+                if (properties.IsLeftButtonPressed)
+                {
+                    // Left click logic here
+                }
+                else if (properties.IsRightButtonPressed)
+                {
+                    // Right click logic here
+                }
+            }
         }
+
     }
 }
 

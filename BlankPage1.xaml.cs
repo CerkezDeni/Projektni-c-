@@ -16,6 +16,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Windows.System.Threading;
 using Windows.UI.Xaml.Media.Imaging;
+using Windows.Media.Playback;
 
 namespace Projektni
 {
@@ -31,7 +32,36 @@ namespace Projektni
             randomNumbers = GenerateRandomNumbers();
             Spawnajmine();
         }
+        private async void AddButton_ClickAsync(object sender, RoutedEventArgs e)
+        {
+            AddMusic _addMusic = new AddMusic();
+            await _addMusic.AddMedia(playList, mediaPlayer);
+        }
 
+
+        private void DeleteButton_Click(object sender, RoutedEventArgs e)
+        {
+            playList.Items.Remove(playList.SelectedItem);
+        }
+
+        private void MediaTransportControls_KeyDown(object sender, Windows.UI.Xaml.Input.KeyRoutedEventArgs e)
+        {
+            if (e.Key == Windows.System.VirtualKey.Space)
+
+                if (mediaPlayer.MediaPlayer.PlaybackSession.PlaybackState == MediaPlaybackState.Playing)
+                {
+                    mediaPlayer.MediaPlayer.Pause();
+                }
+                else if (mediaPlayer.MediaPlayer.PlaybackSession.PlaybackState == MediaPlaybackState.Paused)
+                {
+                    mediaPlayer.MediaPlayer.Play();
+                }
+        }
+
+        private void playList_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
         public List<int> GenerateRandomNumbers()
         {
             Random random = new Random();

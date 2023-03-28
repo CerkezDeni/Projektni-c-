@@ -16,6 +16,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Windows.System.Threading;
 using Windows.UI.Xaml.Media.Imaging;
+using Windows.Media.Playback;
 
 namespace Projektni
 {
@@ -33,7 +34,6 @@ namespace Projektni
             Spawnajmine();
             SweeperStatus();
         }
-
         public List<int> GenerateRandomNumbers()
         {
             Random random = new Random();
@@ -350,9 +350,51 @@ namespace Projektni
                         ImageBrush imageBrush = new ImageBrush();
                         imageBrush.ImageSource = new BitmapImage(new Uri(imagePath));
                         pressedButton.Background = imageBrush;
+                     
                     }
                 }
             }
+        }
+        private void AdvanceField(Button Gumb)
+        {
+            int kolkosmrade = 0;
+            int buttonNumber = GetButtonNumber(Gumb.Name);
+            Button Gumb2 = null; 
+            if (buttonNumber >= 1 && buttonNumber <= 16)
+            {
+                if (buttonNumber == 1)
+                {
+                    Gumb2 = (Button)FindName("Gumb" + (buttonNumber + 16).ToString()); 
+                    if (Gumb2.Tag == "clear")
+                    {
+                        AdvanceField(Gumb2);
+                    }
+
+                }
+            }
+        }
+        private int GetButtonNumber(string buttonName)
+        {
+            int buttonNumber = 0;
+            string numberString = string.Empty;
+
+            for (int i = buttonName.Length - 1; i >= 0; i--)
+            {
+                char c = buttonName[i];
+                if (char.IsDigit(c))
+                {
+                    numberString = c + numberString;
+                }
+                else
+                {
+                    break;
+                }
+            }
+            if (int.TryParse(numberString, out buttonNumber))
+            {
+                return buttonNumber;
+            }
+            return 0;
         }
     }
 }

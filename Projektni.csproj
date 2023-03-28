@@ -135,6 +135,7 @@
   <ItemGroup>
     <Content Include="Assets\flag.png" />
     <Content Include="Assets\flagico.png" />
+    <Content Include="Assets\flagsound.mp3" />
     <Content Include="Assets\pozadina1.jpeg" />
     <Content Include="Assets\smiley.png" />
     <Content Include="Assets\smiley1.png" />

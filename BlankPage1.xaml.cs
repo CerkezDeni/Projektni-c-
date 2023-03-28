@@ -21,7 +21,7 @@ namespace Projektni
 {
     public sealed partial class BlankPage1 : Page
     {
-
+        bool endgame = false;
         List<int> randomNumbers;
         public BlankPage1()
         {
@@ -81,6 +81,11 @@ namespace Projektni
                     if(gumb.Tag=="bombara")
                     {
                         gumb.Content = "bomba";
+                    }
+                    else
+                    {
+                        gumb.Content = "C";
+                        gumb.Tag = "clear";
                     }
                 }
             }
@@ -156,14 +161,56 @@ namespace Projektni
                 if (properties.IsRightButtonPressed)
                 {
                     // Right click
-                
                     Button pressedButton = sender as Button;
-                    pressedButton.Content = ":DDDD";
+                    if (endgame == false)
+                    {
+                        if (pressedButton.Tag != "clicked")
+                        {
+                            if (pressedButton.Tag != "flag" && pressedButton.Tag != "flagandbombara")
+                            {
+                                if (pressedButton.Tag == "bombara")
+                                {
+                                    pressedButton.Tag = "flagandbombara";
 
-                    string imagePath = "ms-appx:///Assets/flagico.png";
-                    ImageBrush imageBrush = new ImageBrush();
-                    imageBrush.ImageSource = new BitmapImage(new Uri(imagePath));
-                    pressedButton.Background = imageBrush;
+                                    string imagePath = "ms-appx:///Assets/flagico.png";
+                                    ImageBrush imageBrush = new ImageBrush();
+                                    imageBrush.ImageSource = new BitmapImage(new Uri(imagePath));
+                                    pressedButton.Background = imageBrush;
+                                }
+                                else
+                                {
+                                    string imagePath = "ms-appx:///Assets/flagico.png";
+                                    ImageBrush imageBrush = new ImageBrush();
+                                    imageBrush.ImageSource = new BitmapImage(new Uri(imagePath));
+                                    pressedButton.Background = imageBrush;
+
+                                    pressedButton.Tag = "flag";
+                                }
+                            }
+                            else
+                            {
+                                if (pressedButton.Tag != "flagandbombara")
+                                {
+                                    pressedButton.Tag = "bombara";
+
+                                    string imagePath = "ms-appx:///Assets/tile.png";
+                                    ImageBrush imageBrush = new ImageBrush();
+                                    imageBrush.ImageSource = new BitmapImage(new Uri(imagePath));
+                                    pressedButton.Background = imageBrush;
+                                }
+                                else
+                                {
+                                    string imagePath = "ms-appx:///Assets/tile.png";
+                                    ImageBrush imageBrush = new ImageBrush();
+                                    imageBrush.ImageSource = new BitmapImage(new Uri(imagePath));
+                                    pressedButton.Background = imageBrush;
+
+                                    pressedButton.Tag = "clear";
+                                }
+                            }
+                        }
+                    }
+                   
                 }
             }
         }
@@ -171,7 +218,21 @@ namespace Projektni
         {
             // Left click
             Button pressedButton = sender as Button;
-            pressedButton.Content = ":DC";
+            if(endgame == false)
+            {
+                if (pressedButton.Tag != "clicked" && pressedButton.Tag != "flag")
+                {
+                    if (pressedButton.Tag == "bombara")
+                    {
+                        endgame = true;
+                        //dovrsi kasnije
+                    }
+                    else
+                    {
+                        pressedButton.Tag = "clicked";
+                    }
+                }
+            }
         }
     }
 }

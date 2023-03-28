@@ -14,9 +14,9 @@
                 <Image Source="Assets/smiley.png" Stretch="Fill"/>
             </StackPanel>
         </Button>
-        <Button x:Name="Gumb1" Content="Button" Margin="560,258,0,0" VerticalAlignment="Top" Width="50" Height="50" PointerPressed="Button_PointerPressed"/>
-        <Button x:Name="Gumb2" Content="Button" Margin="610,258,0,0" VerticalAlignment="Top" Width="50" Height="50" PointerPressed="Button_PointerPressed"/>
-        <Button x:Name="Gumb3" Content="Button" Margin="660,258,0,0" VerticalAlignment="Top" Width="50" Height="50" PointerPressed="Button_PointerPressed"/>
+        <Button x:Name="Gumb1" Content="Button" Margin="560,258,0,0" VerticalAlignment="Top" Width="50" Height="50" PointerPressed="Button_PointerPressed" Click="Button_Click"/>
+        <Button x:Name="Gumb2" Content="Button" Margin="610,258,0,0" VerticalAlignment="Top" Width="50" Height="50" PointerPressed="Button_PointerPressed" Click="Button_Click"/>
+        <Button x:Name="Gumb3" Content="Button" Margin="660,258,0,0" VerticalAlignment="Top" Width="50" Height="50" PointerPressed="Button_PointerPressed" Click="Button_Click"/>
         <Button x:Name="Gumb4" Content="Button" Margin="710,258,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
         <Button x:Name="Gumb5" Content="Button" Margin="760,258,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
         <Button x:Name="Gumb6" Content="Button" Margin="810,258,0,0" VerticalAlignment="Top" Width="50" Height="50"/>

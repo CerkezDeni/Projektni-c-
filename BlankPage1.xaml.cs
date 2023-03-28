@@ -22,15 +22,28 @@ namespace Projektni
     public sealed partial class BlankPage1 : Page
     {
 
-        int rightclick = 0;
-        int leftclick = 0;
+        List<int> randomNumbers;
         public BlankPage1()
         {
             this.InitializeComponent();
             CreateBackgroundThread();
             SetImageForAllButtons();
+            randomNumbers = GenerateRandomNumbers();
+            Spawnajmine();
         }
 
+        public List<int> GenerateRandomNumbers()
+        {
+            Random random = new Random();
+            List<int> numbers = new List<int>();
+
+            for (int i = 0; i < 40; i++)
+            {
+                numbers.Add(random.Next(1, 257));
+            }
+
+            return numbers;
+        }
         private void SetImageForAllButtons()
         {
             string imagePath = "ms-appx:///Assets/tile.png";
@@ -46,6 +59,32 @@ namespace Projektni
                     button.Background = imageBrush;
                 }
             }
+        }
+
+        private void Spawnajmine()
+        {
+            foreach (int i in randomNumbers)
+            {
+                string buttonName = "Gumb" + i;
+                Button button = FindName(buttonName) as Button;
+                if (button != null)
+                {
+                    button.Tag = "bombara";
+                }
+            }
+            for (int i = 1; i <= 256; i++)
+            {
+                string buttonName2 = "Gumb" + i;
+                Button gumb = FindName(buttonName2) as Button;
+                if (gumb != null)
+                {
+                    if(gumb.Tag=="bombara")
+                    {
+                        gumb.Content = "bomba";
+                    }
+                }
+            }
+
         }
 
         private void timer_SelectionChanged(object sender, RoutedEventArgs e)
@@ -114,17 +153,26 @@ namespace Projektni
             if (e.Pointer.PointerDeviceType == Windows.Devices.Input.PointerDeviceType.Mouse)
             {
                 var properties = e.GetCurrentPoint(sender as UIElement).Properties;
-                if (properties.IsLeftButtonPressed)
+                if (properties.IsRightButtonPressed)
                 {
-                    // Left click logic here
-                }
-                else if (properties.IsRightButtonPressed)
-                {
-                    // Right click logic here
+                    // Right click
+                
+                    Button pressedButton = sender as Button;
+                    pressedButton.Content = ":DDDD";
+
+                    string imagePath = "ms-appx:///Assets/flagico.png";
+                    ImageBrush imageBrush = new ImageBrush();
+                    imageBrush.ImageSource = new BitmapImage(new Uri(imagePath));
+                    pressedButton.Background = imageBrush;
                 }
             }
         }
-
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            // Left click
+            Button pressedButton = sender as Button;
+            pressedButton.Content = ":DC";
+        }
     }
 }
 

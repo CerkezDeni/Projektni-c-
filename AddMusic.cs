@@ -8,8 +8,8 @@ using Windows.Media.Playback;
 using Windows.Storage.Pickers;
 using Windows.UI.Xaml.Controls;
 
-namespace MusicPlayer_team1
-{
+namespace Projektni 
+{ 
     public class AddMusic
     {
         public async System.Threading.Tasks.Task AddMedia(ListView listView, MediaPlayerElement mediaPlayerElement)

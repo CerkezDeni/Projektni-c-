@@ -273,23 +273,6 @@
         <Image HorizontalAlignment="Left" Height="210" Margin="-29,20,0,0" VerticalAlignment="Top" Width="210" Source="Assets/flag.png" Stretch="Fill"/>
         <TextBlock x:Name="flagnumberdisplay" HorizontalAlignment="Left" Margin="144,28,0,0" TextWrapping="Wrap" Text="40" VerticalAlignment="Top" Height="179" Width="249" FontSize="150"/>
         <TextBlock x:Name="timeraaa" HorizontalAlignment="Left" Margin="1529,28,0,0" TextWrapping="Wrap" Text="00:00" VerticalAlignment="Top" Height="400" Width="374" FontSize="150" SelectionChanged="timer_SelectionChanged"/>
-        <Grid >
 
-            <StackPanel Orientation="Horizontal" Height="80" BorderBrush="Transparent">
-                <AppBarButton Label="Add" Icon="Add" Click="AddButton_ClickAsync" Visibility="Visible" Foreground="#FFDD7700" HorizontalAlignment="Left" Height="65" Width="80" MaxHeight="75"/>
-                <AppBarButton Label="Delete" Icon="Delete" Click="DeleteButton_Click" Foreground="#FFDD7700" Visibility="Visible" Height="65" Width="80" MaxHeight="75" />
-            </StackPanel>
-            <ListView Name="playList"  Width="390" ScrollViewer.VerticalScrollBarVisibility="Visible"
-                         Height="700" Header="Playlist" RequestedTheme="Default" FontFamily="Ink Free" FontSize="20" Margin="0,568,1530,-188" />
-
-            <MediaPlayerElement x:Name="mediaPlayer" Height="Auto" RequestedTheme="Dark" AreTransportControlsEnabled="True" Margin="10,979,1452,10" >
-                <MediaPlayerElement.TransportControls>
-                    <MediaTransportControls KeyDown="MediaTransportControls_KeyDown" IsCompact="False" IsStopButtonVisible="True" IsStopEnabled="True" IsNextTrackButtonVisible="True" IsPreviousTrackButtonVisible="True" >
-                    </MediaTransportControls>
-                </MediaPlayerElement.TransportControls>
-            </MediaPlayerElement>
-
-
-        </Grid>
     </Grid>
 </Page>

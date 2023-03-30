@@ -14,16 +14,21 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
-
+using Windows.Media.Playback;
+using Windows.Media.Core;
 
 namespace Projektni
 {
     public sealed partial class MainPage : Page
     {
         bool GreenChecky = false;
+        private MediaPlayer mediaPlayer;
         public MainPage()
         {
             this.InitializeComponent();
+            mediaPlayer = new MediaPlayer();
+            mediaPlayer.Source = MediaSource.CreateFromUri(new Uri("ms-appx:///Assets/krava.mp3"));
+            mediaPlayer.Play();
         }
         private Border FindBorder(DependencyObject element)
         {
@@ -60,12 +65,14 @@ namespace Projektni
                 string ImeIgraca = KutijaIme.Text;
                 this.Frame.Navigate(typeof(BlankPage1));
                 Windows.Storage.ApplicationData.Current.LocalSettings.Values["ImeIgraca"] = ImeIgraca;
+                mediaPlayer.Dispose();
             }
             else if(KutijaIme.Text != "")
             {
                 string ImeIgraca = KutijaIme.Text;
                 this.Frame.Navigate(typeof(BlankPage1));
                 Windows.Storage.ApplicationData.Current.LocalSettings.Values["ImeIgraca"] = ImeIgraca;
+                mediaPlayer.Dispose();
             }
             else
             {

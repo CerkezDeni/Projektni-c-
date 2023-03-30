@@ -9,7 +9,10 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <Button x:Name="Status" Margin="861,44,859,0" VerticalAlignment="Top" Height="200" HorizontalAlignment="Stretch">
+        <Grid.Background>
+            <ImageBrush Stretch="Fill" ImageSource="Assets/bka.jpg"/>
+        </Grid.Background>
+        <Button x:Name="Status" Margin="861,44,859,0" VerticalAlignment="Top" Height="200" HorizontalAlignment="Stretch" Click="Status_Click">
         </Button>
         <Button x:Name="Gumb1" Content="Button" Margin="560,258,0,0" VerticalAlignment="Top" Width="50" Height="50" PointerPressed="Button_PointerPressed" Click="Button_Click"/>
         <Button x:Name="Gumb2" Content="Button" Margin="610,258,0,0" VerticalAlignment="Top" Width="50" Height="50" PointerPressed="Button_PointerPressed" Click="Button_Click"/>

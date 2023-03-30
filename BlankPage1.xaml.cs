@@ -95,35 +95,27 @@ namespace Projektni
                             break;
                         case 1:
                             Gumbara.Tag = "1";
-                            Gumbara.Content = "1";
                             break;
                         case 2:
                             Gumbara.Tag = "2";
-                            Gumbara.Content = "2";
                             break;
                         case 3:
                             Gumbara.Tag = "3";
-                            Gumbara.Content = "3";
                             break;
                         case 4:
                             Gumbara.Tag = "4";
-                            Gumbara.Content = "4";
                             break;
                         case 5:
                             Gumbara.Tag = "5";
-                            Gumbara.Content = "5";
                             break;
                         case 6:
                             Gumbara.Tag = "6";
-                            Gumbara.Content = "6";
                             break;
                         case 7:
                             Gumbara.Tag = "7";
-                            Gumbara.Content = "7";
                             break;
                         case 8:
                             Gumbara.Tag = "8";
-                            Gumbara.Content = "8";
                             break;
                     }
                 }
@@ -175,13 +167,8 @@ namespace Projektni
                 Button gumb = FindName(buttonName2) as Button;
                 if (gumb != null)
                 {
-                    if(gumb.Tag=="bombara")
+                    if(gumb.Tag!="bombara")
                     {
-                        gumb.Content = "bomba";
-                    }
-                    else
-                    {
-                        gumb.Content = "C";
                         gumb.Tag = "clear";
                     }
                 }
@@ -691,80 +678,83 @@ namespace Projektni
             Button Gumb8 = (Button)FindName("Gumb" + (i + 17).ToString());
             if(Gumb.Tag != "1clicked" && Gumb.Tag != "2clicked" && Gumb.Tag != "3clicked" && Gumb.Tag != "4clicked" && Gumb.Tag != "5clicked" && Gumb.Tag != "6clicked" && Gumb.Tag != "7clicked" && Gumb.Tag != "8clicked" && Gumb.Tag != "1" && Gumb.Tag != "2" && Gumb.Tag != "3" && Gumb.Tag != "4" && Gumb.Tag != "5" && Gumb.Tag != "6" && Gumb.Tag != "7" && Gumb.Tag != "8")
             {
-                if (Gumb1 != null)
+                if(i != 1 && i != 17 && i != 33 && i != 49 && i != 65 && i != 81 && i != 97 && i != 113 && i != 129 && i != 145 && i != 161 && i != 177 && i != 193 && i != 209 && i != 225 && i != 241)
                 {
-                    if (Gumb1.Tag == "flag" || Gumb1.Tag == "clear")
+                    if (Gumb1 != null)
                     {
-                        Gumb1.Tag = "clicked";
-                        string imagePath = "ms-appx:///Assets/tileclicked.png";
-                        ImageBrush imageBrush = new ImageBrush();
-                        imageBrush.ImageSource = new BitmapImage(new Uri(imagePath));
-                        Gumb1.Background = imageBrush;
-                        AdvanceField(Gumb1);
-                    }
-                    else if (Gumb1.Tag == "1" || Gumb1.Tag == "flag1")
-                    {
-                        Gumb1.Tag = "1clicked";
-                        string imagePath = "ms-appx:///Assets/1.png";
-                        ImageBrush imageBrush = new ImageBrush();
-                        imageBrush.ImageSource = new BitmapImage(new Uri(imagePath));
-                        Gumb1.Background = imageBrush;
-                    }
-                    else if (Gumb1.Tag == "2" || Gumb1.Tag == "flag2")
-                    {
-                        Gumb1.Tag = "2clicked";
-                        string imagePath = "ms-appx:///Assets/2.png";
-                        ImageBrush imageBrush = new ImageBrush();
-                        imageBrush.ImageSource = new BitmapImage(new Uri(imagePath));
-                        Gumb1.Background = imageBrush;
-                    }
-                    else if (Gumb1.Tag == "3" || Gumb1.Tag == "flag3")
-                    {
-                        Gumb1.Tag = "3clicked";
-                        string imagePath = "ms-appx:///Assets/3.png";
-                        ImageBrush imageBrush = new ImageBrush();
-                        imageBrush.ImageSource = new BitmapImage(new Uri(imagePath));
-                        Gumb1.Background = imageBrush;
-                    }
-                    else if (Gumb1.Tag == "4" || Gumb1.Tag == "flag4")
-                    {
-                        Gumb1.Tag = "4clicked";
-                        string imagePath = "ms-appx:///Assets/4.png";
-                        ImageBrush imageBrush = new ImageBrush();
-                        imageBrush.ImageSource = new BitmapImage(new Uri(imagePath));
-                        Gumb1.Background = imageBrush;
-                    }
-                    else if (Gumb1.Tag == "5" || Gumb1.Tag == "flag5")
-                    {
-                        Gumb1.Tag = "5clicked";
-                        string imagePath = "ms-appx:///Assets/5.png";
-                        ImageBrush imageBrush = new ImageBrush();
-                        imageBrush.ImageSource = new BitmapImage(new Uri(imagePath));
-                        Gumb1.Background = imageBrush;
-                    }
-                    else if (Gumb1.Tag == "6" || Gumb1.Tag == "flag6")
-                    {
-                        Gumb1.Tag = "6clicked";
-                        string imagePath = "ms-appx:///Assets/6.png";
-                        ImageBrush imageBrush = new ImageBrush();
-                        imageBrush.ImageSource = new BitmapImage(new Uri(imagePath));
-                        Gumb1.Background = imageBrush;
-                    }
-                    else if (Gumb1.Tag == "7" || Gumb1.Tag == "flag7")
-                    {
-                        Gumb1.Tag = "7clicked";
-                        string imagePath = "ms-appx:///Assets/7.png";
-                        ImageBrush imageBrush = new ImageBrush();
-                        imageBrush.ImageSource = new BitmapImage(new Uri(imagePath));
-                        Gumb1.Background = imageBrush;
-                    }
-                    else if (Gumb1.Tag == "8" || Gumb1.Tag == "flag8")
-                    {
-                        Gumb1.Tag = "8clicked";
-                        string imagePath = "ms-appx:///Assets/8.png";
-                        ImageBrush imageBrush = new ImageBrush();
-                        imageBrush.ImageSource = new BitmapImage(new Uri(imagePath));
-                        Gumb1.Background = imageBrush;
+                        if (Gumb1.Tag == "flag" || Gumb1.Tag == "clear")
+                        {
+                            Gumb1.Tag = "clicked";
+                            string imagePath = "ms-appx:///Assets/tileclicked.png";
+                            ImageBrush imageBrush = new ImageBrush();
+                            imageBrush.ImageSource = new BitmapImage(new Uri(imagePath));
+                            Gumb1.Background = imageBrush;
+                            AdvanceField(Gumb1);
+                        }
+                        else if (Gumb1.Tag == "1" || Gumb1.Tag == "flag1")
+                        {
+                            Gumb1.Tag = "1clicked";
+                            string imagePath = "ms-appx:///Assets/1.png";
+                            ImageBrush imageBrush = new ImageBrush();
+                            imageBrush.ImageSource = new BitmapImage(new Uri(imagePath));
+                            Gumb1.Background = imageBrush;
+                        }
+                        else if (Gumb1.Tag == "2" || Gumb1.Tag == "flag2")
+                        {
+                            Gumb1.Tag = "2clicked";
+                            string imagePath = "ms-appx:///Assets/2.png";
+                            ImageBrush imageBrush = new ImageBrush();
+                            imageBrush.ImageSource = new BitmapImage(new Uri(imagePath));
+                            Gumb1.Background = imageBrush;
+                        }
+                        else if (Gumb1.Tag == "3" || Gumb1.Tag == "flag3")
+                        {
+                            Gumb1.Tag = "3clicked";
+                            string imagePath = "ms-appx:///Assets/3.png";
+                            ImageBrush imageBrush = new ImageBrush();
+                            imageBrush.ImageSource = new BitmapImage(new Uri(imagePath));
+                            Gumb1.Background = imageBrush;
+                        }
+                        else if (Gumb1.Tag == "4" || Gumb1.Tag == "flag4")
+                        {
+                            Gumb1.Tag = "4clicked";
+                            string imagePath = "ms-appx:///Assets/4.png";
+                            ImageBrush imageBrush = new ImageBrush();
+                            imageBrush.ImageSource = new BitmapImage(new Uri(imagePath));
+                            Gumb1.Background = imageBrush;
+                        }
+                        else if (Gumb1.Tag == "5" || Gumb1.Tag == "flag5")
+                        {
+                            Gumb1.Tag = "5clicked";
+                            string imagePath = "ms-appx:///Assets/5.png";
+                            ImageBrush imageBrush = new ImageBrush();
+                            imageBrush.ImageSource = new BitmapImage(new Uri(imagePath));
+                            Gumb1.Background = imageBrush;
+                        }
+                        else if (Gumb1.Tag == "6" || Gumb1.Tag == "flag6")
+                        {
+                            Gumb1.Tag = "6clicked";
+                            string imagePath = "ms-appx:///Assets/6.png";
+                            ImageBrush imageBrush = new ImageBrush();
+                            imageBrush.ImageSource = new BitmapImage(new Uri(imagePath));
+                            Gumb1.Background = imageBrush;
+                        }
+                        else if (Gumb1.Tag == "7" || Gumb1.Tag == "flag7")
+                        {
+                            Gumb1.Tag = "7clicked";
+                            string imagePath = "ms-appx:///Assets/7.png";
+                            ImageBrush imageBrush = new ImageBrush();
+                            imageBrush.ImageSource = new BitmapImage(new Uri(imagePath));
+                            Gumb1.Background = imageBrush;
+                        }
+                        else if (Gumb1.Tag == "8" || Gumb1.Tag == "flag8")
+                        {
+                            Gumb1.Tag = "8clicked";
+                            string imagePath = "ms-appx:///Assets/8.png";
+                            ImageBrush imageBrush = new ImageBrush();
+                            imageBrush.ImageSource = new BitmapImage(new Uri(imagePath));
+                            Gumb1.Background = imageBrush;
+                        }
                     }
                 }
                 if (Gumb2 != null)
@@ -843,308 +833,320 @@ namespace Projektni
                         Gumb2.Background = imageBrush;
                     }
                 }
-                if (Gumb3 != null)
+                if(i != 16 && i != 32 && i != 48 && i != 64 && i != 80 && i != 96 && i != 112 && i != 128 && i != 144 && i != 160 && i != 176 && i != 192 && i != 208 && i != 224 && i != 240 && i != 256)
                 {
-                    if (Gumb3.Tag == "flag" || Gumb3.Tag == "clear")
+                    if (Gumb3 != null)
                     {
-                        Gumb3.Tag = "clicked";
-                        string imagePath = "ms-appx:///Assets/tileclicked.png";
-                        ImageBrush imageBrush = new ImageBrush();
-                        imageBrush.ImageSource = new BitmapImage(new Uri(imagePath));
-                        Gumb3.Background = imageBrush;
-                        AdvanceField(Gumb3);
-                    }
-                    else if (Gumb3.Tag == "1" || Gumb3.Tag == "flag1")
-                    {
-                        Gumb3.Tag = "1clicked";
-                        string imagePath = "ms-appx:///Assets/1.png";
-                        ImageBrush imageBrush = new ImageBrush();
-                        imageBrush.ImageSource = new BitmapImage(new Uri(imagePath));
-                        Gumb3.Background = imageBrush;
-                    }
-                    else if (Gumb3.Tag == "2" || Gumb3.Tag == "flag2")
-                    {
-                        Gumb3.Tag = "2clicked";
-                        string imagePath = "ms-appx:///Assets/2.png";
-                        ImageBrush imageBrush = new ImageBrush();
-                        imageBrush.ImageSource = new BitmapImage(new Uri(imagePath));
-                        Gumb3.Background = imageBrush;
-                    }
-                    else if (Gumb3.Tag == "3" || Gumb3.Tag == "flag3")
-                    {
-                        Gumb3.Tag = "3clicked";
-                        string imagePath = "ms-appx:///Assets/3.png";
-                        ImageBrush imageBrush = new ImageBrush();
-                        imageBrush.ImageSource = new BitmapImage(new Uri(imagePath));
-                        Gumb3.Background = imageBrush;
-                    }
-                    else if (Gumb3.Tag == "4" || Gumb3.Tag == "flag4")
-                    {
-                        Gumb3.Tag = "4clicked";
-                        string imagePath = "ms-appx:///Assets/4.png";
-                        ImageBrush imageBrush = new ImageBrush();
-                        imageBrush.ImageSource = new BitmapImage(new Uri(imagePath));
-                        Gumb3.Background = imageBrush;
-                    }
-                    else if (Gumb3.Tag == "5" || Gumb3.Tag == "flag5")
-                    {
-                        Gumb3.Tag = "5clicked";
-                        string imagePath = "ms-appx:///Assets/5.png";
-                        ImageBrush imageBrush = new ImageBrush();
-                        imageBrush.ImageSource = new BitmapImage(new Uri(imagePath));
-                        Gumb3.Background = imageBrush;
-                    }
-                    else if (Gumb3.Tag == "6" || Gumb3.Tag == "flag6")
-                    {
-                        Gumb3.Tag = "6clicked";
-                        string imagePath = "ms-appx:///Assets/6.png";
-                        ImageBrush imageBrush = new ImageBrush();
-                        imageBrush.ImageSource = new BitmapImage(new Uri(imagePath));
-                        Gumb3.Background = imageBrush;
-                    }
-                    else if (Gumb3.Tag == "7" || Gumb3.Tag == "flag7")
-                    {
-                        Gumb3.Tag = "7clicked";
-                        string imagePath = "ms-appx:///Assets/7.png";
-                        ImageBrush imageBrush = new ImageBrush();
-                        imageBrush.ImageSource = new BitmapImage(new Uri(imagePath));
-                        Gumb3.Background = imageBrush;
-                    }
-                    else if (Gumb3.Tag == "8" || Gumb3.Tag == "flag8")
-                    {
-                        Gumb3.Tag = "8clicked";
-                        string imagePath = "ms-appx:///Assets/8.png";
-                        ImageBrush imageBrush = new ImageBrush();
-                        imageBrush.ImageSource = new BitmapImage(new Uri(imagePath));
-                        Gumb3.Background = imageBrush;
+                        if (Gumb3.Tag == "flag" || Gumb3.Tag == "clear")
+                        {
+                            Gumb3.Tag = "clicked";
+                            string imagePath = "ms-appx:///Assets/tileclicked.png";
+                            ImageBrush imageBrush = new ImageBrush();
+                            imageBrush.ImageSource = new BitmapImage(new Uri(imagePath));
+                            Gumb3.Background = imageBrush;
+                            AdvanceField(Gumb3);
+                        }
+                        else if (Gumb3.Tag == "1" || Gumb3.Tag == "flag1")
+                        {
+                            Gumb3.Tag = "1clicked";
+                            string imagePath = "ms-appx:///Assets/1.png";
+                            ImageBrush imageBrush = new ImageBrush();
+                            imageBrush.ImageSource = new BitmapImage(new Uri(imagePath));
+                            Gumb3.Background = imageBrush;
+                        }
+                        else if (Gumb3.Tag == "2" || Gumb3.Tag == "flag2")
+                        {
+                            Gumb3.Tag = "2clicked";
+                            string imagePath = "ms-appx:///Assets/2.png";
+                            ImageBrush imageBrush = new ImageBrush();
+                            imageBrush.ImageSource = new BitmapImage(new Uri(imagePath));
+                            Gumb3.Background = imageBrush;
+                        }
+                        else if (Gumb3.Tag == "3" || Gumb3.Tag == "flag3")
+                        {
+                            Gumb3.Tag = "3clicked";
+                            string imagePath = "ms-appx:///Assets/3.png";
+                            ImageBrush imageBrush = new ImageBrush();
+                            imageBrush.ImageSource = new BitmapImage(new Uri(imagePath));
+                            Gumb3.Background = imageBrush;
+                        }
+                        else if (Gumb3.Tag == "4" || Gumb3.Tag == "flag4")
+                        {
+                            Gumb3.Tag = "4clicked";
+                            string imagePath = "ms-appx:///Assets/4.png";
+                            ImageBrush imageBrush = new ImageBrush();
+                            imageBrush.ImageSource = new BitmapImage(new Uri(imagePath));
+                            Gumb3.Background = imageBrush;
+                        }
+                        else if (Gumb3.Tag == "5" || Gumb3.Tag == "flag5")
+                        {
+                            Gumb3.Tag = "5clicked";
+                            string imagePath = "ms-appx:///Assets/5.png";
+                            ImageBrush imageBrush = new ImageBrush();
+                            imageBrush.ImageSource = new BitmapImage(new Uri(imagePath));
+                            Gumb3.Background = imageBrush;
+                        }
+                        else if (Gumb3.Tag == "6" || Gumb3.Tag == "flag6")
+                        {
+                            Gumb3.Tag = "6clicked";
+                            string imagePath = "ms-appx:///Assets/6.png";
+                            ImageBrush imageBrush = new ImageBrush();
+                            imageBrush.ImageSource = new BitmapImage(new Uri(imagePath));
+                            Gumb3.Background = imageBrush;
+                        }
+                        else if (Gumb3.Tag == "7" || Gumb3.Tag == "flag7")
+                        {
+                            Gumb3.Tag = "7clicked";
+                            string imagePath = "ms-appx:///Assets/7.png";
+                            ImageBrush imageBrush = new ImageBrush();
+                            imageBrush.ImageSource = new BitmapImage(new Uri(imagePath));
+                            Gumb3.Background = imageBrush;
+                        }
+                        else if (Gumb3.Tag == "8" || Gumb3.Tag == "flag8")
+                        {
+                            Gumb3.Tag = "8clicked";
+                            string imagePath = "ms-appx:///Assets/8.png";
+                            ImageBrush imageBrush = new ImageBrush();
+                            imageBrush.ImageSource = new BitmapImage(new Uri(imagePath));
+                            Gumb3.Background = imageBrush;
+                        }
                     }
                 }
-                if (Gumb4 != null)
+                if (i != 1 && i != 17 && i != 33 && i != 49 && i != 65 && i != 81 && i != 97 && i != 113 && i != 129 && i != 145 && i != 161 && i != 177 && i != 193 && i != 209 && i != 225 && i != 241)
                 {
-                    if (Gumb4.Tag == "flag" || Gumb4.Tag == "clear")
+                    if (Gumb4 != null)
                     {
-                        Gumb4.Tag = "clicked";
-                        string imagePath = "ms-appx:///Assets/tileclicked.png";
-                        ImageBrush imageBrush = new ImageBrush();
-                        imageBrush.ImageSource = new BitmapImage(new Uri(imagePath));
-                        Gumb4.Background = imageBrush;
-                        AdvanceField(Gumb4);
-                    }
-                    else if (Gumb4.Tag == "1" || Gumb4.Tag == "flag1")
-                    {
-                        Gumb4.Tag = "1clicked";
-                        string imagePath = "ms-appx:///Assets/1.png";
-                        ImageBrush imageBrush = new ImageBrush();
-                        imageBrush.ImageSource = new BitmapImage(new Uri(imagePath));
-                        Gumb4.Background = imageBrush;
-                    }
-                    else if (Gumb4.Tag == "2" || Gumb4.Tag == "flag2")
-                    {
-                        Gumb4.Tag = "2clicked";
-                        string imagePath = "ms-appx:///Assets/2.png";
-                        ImageBrush imageBrush = new ImageBrush();
-                        imageBrush.ImageSource = new BitmapImage(new Uri(imagePath));
-                        Gumb4.Background = imageBrush;
-                    }
-                    else if (Gumb4.Tag == "3" || Gumb4.Tag == "flag3")
-                    {
-                        Gumb4.Tag = "3clicked";
-                        string imagePath = "ms-appx:///Assets/3.png";
-                        ImageBrush imageBrush = new ImageBrush();
-                        imageBrush.ImageSource = new BitmapImage(new Uri(imagePath));
-                        Gumb4.Background = imageBrush;
-                    }
-                    else if (Gumb4.Tag == "4" || Gumb4.Tag == "flag4")
-                    {
-                        Gumb4.Tag = "4clicked";
-                        string imagePath = "ms-appx:///Assets/4.png";
-                        ImageBrush imageBrush = new ImageBrush();
-                        imageBrush.ImageSource = new BitmapImage(new Uri(imagePath));
-                        Gumb4.Background = imageBrush;
-                    }
-                    else if (Gumb4.Tag == "5" || Gumb4.Tag == "flag5")
-                    {
-                        Gumb4.Tag = "5clicked";
-                        string imagePath = "ms-appx:///Assets/5.png";
-                        ImageBrush imageBrush = new ImageBrush();
-                        imageBrush.ImageSource = new BitmapImage(new Uri(imagePath));
-                        Gumb4.Background = imageBrush;
-                    }
-                    else if (Gumb4.Tag == "6" || Gumb4.Tag == "flag6")
-                    {
-                        Gumb4.Tag = "6clicked";
-                        string imagePath = "ms-appx:///Assets/6.png";
-                        ImageBrush imageBrush = new ImageBrush();
-                        imageBrush.ImageSource = new BitmapImage(new Uri(imagePath));
-                        Gumb4.Background = imageBrush;
-                    }
-                    else if (Gumb4.Tag == "7" || Gumb4.Tag == "flag7")
-                    {
-                        Gumb4.Tag = "7clicked";
-                        string imagePath = "ms-appx:///Assets/7.png";
-                        ImageBrush imageBrush = new ImageBrush();
-                        imageBrush.ImageSource = new BitmapImage(new Uri(imagePath));
-                        Gumb4.Background = imageBrush;
-                    }
-                    else if (Gumb4.Tag == "8" || Gumb4.Tag == "flag8")
-                    {
-                        Gumb4.Tag = "8clicked";
-                        string imagePath = "ms-appx:///Assets/8.png";
-                        ImageBrush imageBrush = new ImageBrush();
-                        imageBrush.ImageSource = new BitmapImage(new Uri(imagePath));
-                        Gumb4.Background = imageBrush;
+                        if (Gumb4.Tag == "flag" || Gumb4.Tag == "clear")
+                        {
+                            Gumb4.Tag = "clicked";
+                            string imagePath = "ms-appx:///Assets/tileclicked.png";
+                            ImageBrush imageBrush = new ImageBrush();
+                            imageBrush.ImageSource = new BitmapImage(new Uri(imagePath));
+                            Gumb4.Background = imageBrush;
+                            AdvanceField(Gumb4);
+                        }
+                        else if (Gumb4.Tag == "1" || Gumb4.Tag == "flag1")
+                        {
+                            Gumb4.Tag = "1clicked";
+                            string imagePath = "ms-appx:///Assets/1.png";
+                            ImageBrush imageBrush = new ImageBrush();
+                            imageBrush.ImageSource = new BitmapImage(new Uri(imagePath));
+                            Gumb4.Background = imageBrush;
+                        }
+                        else if (Gumb4.Tag == "2" || Gumb4.Tag == "flag2")
+                        {
+                            Gumb4.Tag = "2clicked";
+                            string imagePath = "ms-appx:///Assets/2.png";
+                            ImageBrush imageBrush = new ImageBrush();
+                            imageBrush.ImageSource = new BitmapImage(new Uri(imagePath));
+                            Gumb4.Background = imageBrush;
+                        }
+                        else if (Gumb4.Tag == "3" || Gumb4.Tag == "flag3")
+                        {
+                            Gumb4.Tag = "3clicked";
+                            string imagePath = "ms-appx:///Assets/3.png";
+                            ImageBrush imageBrush = new ImageBrush();
+                            imageBrush.ImageSource = new BitmapImage(new Uri(imagePath));
+                            Gumb4.Background = imageBrush;
+                        }
+                        else if (Gumb4.Tag == "4" || Gumb4.Tag == "flag4")
+                        {
+                            Gumb4.Tag = "4clicked";
+                            string imagePath = "ms-appx:///Assets/4.png";
+                            ImageBrush imageBrush = new ImageBrush();
+                            imageBrush.ImageSource = new BitmapImage(new Uri(imagePath));
+                            Gumb4.Background = imageBrush;
+                        }
+                        else if (Gumb4.Tag == "5" || Gumb4.Tag == "flag5")
+                        {
+                            Gumb4.Tag = "5clicked";
+                            string imagePath = "ms-appx:///Assets/5.png";
+                            ImageBrush imageBrush = new ImageBrush();
+                            imageBrush.ImageSource = new BitmapImage(new Uri(imagePath));
+                            Gumb4.Background = imageBrush;
+                        }
+                        else if (Gumb4.Tag == "6" || Gumb4.Tag == "flag6")
+                        {
+                            Gumb4.Tag = "6clicked";
+                            string imagePath = "ms-appx:///Assets/6.png";
+                            ImageBrush imageBrush = new ImageBrush();
+                            imageBrush.ImageSource = new BitmapImage(new Uri(imagePath));
+                            Gumb4.Background = imageBrush;
+                        }
+                        else if (Gumb4.Tag == "7" || Gumb4.Tag == "flag7")
+                        {
+                            Gumb4.Tag = "7clicked";
+                            string imagePath = "ms-appx:///Assets/7.png";
+                            ImageBrush imageBrush = new ImageBrush();
+                            imageBrush.ImageSource = new BitmapImage(new Uri(imagePath));
+                            Gumb4.Background = imageBrush;
+                        }
+                        else if (Gumb4.Tag == "8" || Gumb4.Tag == "flag8")
+                        {
+                            Gumb4.Tag = "8clicked";
+                            string imagePath = "ms-appx:///Assets/8.png";
+                            ImageBrush imageBrush = new ImageBrush();
+                            imageBrush.ImageSource = new BitmapImage(new Uri(imagePath));
+                            Gumb4.Background = imageBrush;
+                        }
                     }
                 }
-                if (Gumb5 != null)
+                if (i != 16 && i != 32 && i != 48 && i != 64 && i != 80 && i != 96 && i != 112 && i != 128 && i != 144 && i != 160 && i != 176 && i != 192 && i != 208 && i != 224 && i != 240 && i != 256)
                 {
-                    if (Gumb5.Tag == "flag" || Gumb5.Tag == "clear")
+                    if (Gumb5 != null)
                     {
-                        Gumb5.Tag = "clicked";
-                        string imagePath = "ms-appx:///Assets/tileclicked.png";
-                        ImageBrush imageBrush = new ImageBrush();
-                        imageBrush.ImageSource = new BitmapImage(new Uri(imagePath));
-                        Gumb5.Background = imageBrush;
-                        AdvanceField(Gumb5);
-                    }
-                    else if (Gumb5.Tag == "1" || Gumb5.Tag == "flag1")
-                    {
-                        Gumb5.Tag = "1clicked";
-                        string imagePath = "ms-appx:///Assets/1.png";
-                        ImageBrush imageBrush = new ImageBrush();
-                        imageBrush.ImageSource = new BitmapImage(new Uri(imagePath));
-                        Gumb5.Background = imageBrush;
-                    }
-                    else if (Gumb5.Tag == "2" || Gumb5.Tag == "flag2")
-                    {
-                        Gumb5.Tag = "2clicked";
-                        string imagePath = "ms-appx:///Assets/2.png";
-                        ImageBrush imageBrush = new ImageBrush();
-                        imageBrush.ImageSource = new BitmapImage(new Uri(imagePath));
-                        Gumb5.Background = imageBrush;
-                    }
-                    else if (Gumb5.Tag == "3" || Gumb5.Tag == "flag3")
-                    {
-                        Gumb5.Tag = "3clicked";
-                        string imagePath = "ms-appx:///Assets/3.png";
-                        ImageBrush imageBrush = new ImageBrush();
-                        imageBrush.ImageSource = new BitmapImage(new Uri(imagePath));
-                        Gumb5.Background = imageBrush;
-                    }
-                    else if (Gumb5.Tag == "4" || Gumb5.Tag == "flag4")
-                    {
-                        Gumb5.Tag = "4clicked";
-                        string imagePath = "ms-appx:///Assets/4.png";
-                        ImageBrush imageBrush = new ImageBrush();
-                        imageBrush.ImageSource = new BitmapImage(new Uri(imagePath));
-                        Gumb5.Background = imageBrush;
-                    }
-                    else if (Gumb5.Tag == "5" || Gumb5.Tag == "flag5")
-                    {
-                        Gumb5.Tag = "5clicked";
-                        string imagePath = "ms-appx:///Assets/5.png";
-                        ImageBrush imageBrush = new ImageBrush();
-                        imageBrush.ImageSource = new BitmapImage(new Uri(imagePath));
-                        Gumb5.Background = imageBrush;
-                    }
-                    else if (Gumb5.Tag == "6" || Gumb5.Tag == "flag6")
-                    {
-                        Gumb5.Tag = "6clicked";
-                        string imagePath = "ms-appx:///Assets/6.png";
-                        ImageBrush imageBrush = new ImageBrush();
-                        imageBrush.ImageSource = new BitmapImage(new Uri(imagePath));
-                        Gumb5.Background = imageBrush;
-                    }
-                    else if (Gumb5.Tag == "7" || Gumb5.Tag == "flag7")
-                    {
-                        Gumb5.Tag = "7clicked";
-                        string imagePath = "ms-appx:///Assets/7.png";
-                        ImageBrush imageBrush = new ImageBrush();
-                        imageBrush.ImageSource = new BitmapImage(new Uri(imagePath));
-                        Gumb5.Background = imageBrush;
-                    }
-                    else if (Gumb5.Tag == "8" || Gumb5.Tag == "flag8")
-                    {
-                        Gumb5.Tag = "8clicked";
-                        string imagePath = "ms-appx:///Assets/8.png";
-                        ImageBrush imageBrush = new ImageBrush();
-                        imageBrush.ImageSource = new BitmapImage(new Uri(imagePath));
-                        Gumb5.Background = imageBrush;
+                        if (Gumb5.Tag == "flag" || Gumb5.Tag == "clear")
+                        {
+                            Gumb5.Tag = "clicked";
+                            string imagePath = "ms-appx:///Assets/tileclicked.png";
+                            ImageBrush imageBrush = new ImageBrush();
+                            imageBrush.ImageSource = new BitmapImage(new Uri(imagePath));
+                            Gumb5.Background = imageBrush;
+                            AdvanceField(Gumb5);
+                        }
+                        else if (Gumb5.Tag == "1" || Gumb5.Tag == "flag1")
+                        {
+                            Gumb5.Tag = "1clicked";
+                            string imagePath = "ms-appx:///Assets/1.png";
+                            ImageBrush imageBrush = new ImageBrush();
+                            imageBrush.ImageSource = new BitmapImage(new Uri(imagePath));
+                            Gumb5.Background = imageBrush;
+                        }
+                        else if (Gumb5.Tag == "2" || Gumb5.Tag == "flag2")
+                        {
+                            Gumb5.Tag = "2clicked";
+                            string imagePath = "ms-appx:///Assets/2.png";
+                            ImageBrush imageBrush = new ImageBrush();
+                            imageBrush.ImageSource = new BitmapImage(new Uri(imagePath));
+                            Gumb5.Background = imageBrush;
+                        }
+                        else if (Gumb5.Tag == "3" || Gumb5.Tag == "flag3")
+                        {
+                            Gumb5.Tag = "3clicked";
+                            string imagePath = "ms-appx:///Assets/3.png";
+                            ImageBrush imageBrush = new ImageBrush();
+                            imageBrush.ImageSource = new BitmapImage(new Uri(imagePath));
+                            Gumb5.Background = imageBrush;
+                        }
+                        else if (Gumb5.Tag == "4" || Gumb5.Tag == "flag4")
+                        {
+                            Gumb5.Tag = "4clicked";
+                            string imagePath = "ms-appx:///Assets/4.png";
+                            ImageBrush imageBrush = new ImageBrush();
+                            imageBrush.ImageSource = new BitmapImage(new Uri(imagePath));
+                            Gumb5.Background = imageBrush;
+                        }
+                        else if (Gumb5.Tag == "5" || Gumb5.Tag == "flag5")
+                        {
+                            Gumb5.Tag = "5clicked";
+                            string imagePath = "ms-appx:///Assets/5.png";
+                            ImageBrush imageBrush = new ImageBrush();
+                            imageBrush.ImageSource = new BitmapImage(new Uri(imagePath));
+                            Gumb5.Background = imageBrush;
+                        }
+                        else if (Gumb5.Tag == "6" || Gumb5.Tag == "flag6")
+                        {
+                            Gumb5.Tag = "6clicked";
+                            string imagePath = "ms-appx:///Assets/6.png";
+                            ImageBrush imageBrush = new ImageBrush();
+                            imageBrush.ImageSource = new BitmapImage(new Uri(imagePath));
+                            Gumb5.Background = imageBrush;
+                        }
+                        else if (Gumb5.Tag == "7" || Gumb5.Tag == "flag7")
+                        {
+                            Gumb5.Tag = "7clicked";
+                            string imagePath = "ms-appx:///Assets/7.png";
+                            ImageBrush imageBrush = new ImageBrush();
+                            imageBrush.ImageSource = new BitmapImage(new Uri(imagePath));
+                            Gumb5.Background = imageBrush;
+                        }
+                        else if (Gumb5.Tag == "8" || Gumb5.Tag == "flag8")
+                        {
+                            Gumb5.Tag = "8clicked";
+                            string imagePath = "ms-appx:///Assets/8.png";
+                            ImageBrush imageBrush = new ImageBrush();
+                            imageBrush.ImageSource = new BitmapImage(new Uri(imagePath));
+                            Gumb5.Background = imageBrush;
+                        }
                     }
                 }
-                if (Gumb6 != null)
+                if (i != 1 && i != 17 && i != 33 && i != 49 && i != 65 && i != 81 && i != 97 && i != 113 && i != 129 && i != 145 && i != 161 && i != 177 && i != 193 && i != 209 && i != 225 && i != 241)
                 {
-                    if (Gumb6.Tag == "flag" || Gumb6.Tag == "clear")
+                    if (Gumb6 != null)
                     {
-                        Gumb6.Tag = "clicked";
-                        string imagePath = "ms-appx:///Assets/tileclicked.png";
-                        ImageBrush imageBrush = new ImageBrush();
-                        imageBrush.ImageSource = new BitmapImage(new Uri(imagePath));
-                        Gumb6.Background = imageBrush;
-                        AdvanceField(Gumb6);
-                    }
-                    else if (Gumb6.Tag == "1" || Gumb6.Tag == "flag1")
-                    {
-                        Gumb6.Tag = "1clicked";
-                        string imagePath = "ms-appx:///Assets/1.png";
-                        ImageBrush imageBrush = new ImageBrush();
-                        imageBrush.ImageSource = new BitmapImage(new Uri(imagePath));
-                        Gumb6.Background = imageBrush;
-                    }
-                    else if (Gumb6.Tag == "2" || Gumb6.Tag == "flag2")
-                    {
-                        Gumb6.Tag = "2clicked";
-                        string imagePath = "ms-appx:///Assets/2.png";
-                        ImageBrush imageBrush = new ImageBrush();
-                        imageBrush.ImageSource = new BitmapImage(new Uri(imagePath));
-                        Gumb6.Background = imageBrush;
-                    }
-                    else if (Gumb6.Tag == "3" || Gumb6.Tag == "flag3")
-                    {
-                        Gumb6.Tag = "3clicked";
-                        string imagePath = "ms-appx:///Assets/3.png";
-                        ImageBrush imageBrush = new ImageBrush();
-                        imageBrush.ImageSource = new BitmapImage(new Uri(imagePath));
-                        Gumb6.Background = imageBrush;
-                    }
-                    else if (Gumb6.Tag == "4" || Gumb6.Tag == "flag4")
-                    {
-                        Gumb6.Tag = "4clicked";
-                        string imagePath = "ms-appx:///Assets/4.png";
-                        ImageBrush imageBrush = new ImageBrush();
-                        imageBrush.ImageSource = new BitmapImage(new Uri(imagePath));
-                        Gumb6.Background = imageBrush;
-                    }
-                    else if (Gumb6.Tag == "5" || Gumb6.Tag == "flag5")
-                    {
-                        Gumb6.Tag = "5clicked";
-                        string imagePath = "ms-appx:///Assets/5.png";
-                        ImageBrush imageBrush = new ImageBrush();
-                        imageBrush.ImageSource = new BitmapImage(new Uri(imagePath));
-                        Gumb6.Background = imageBrush;
-                    }
-                    else if (Gumb6.Tag == "6" || Gumb6.Tag == "flag6")
-                    {
-                        Gumb6.Tag = "6clicked";
-                        string imagePath = "ms-appx:///Assets/6.png";
-                        ImageBrush imageBrush = new ImageBrush();
-                        imageBrush.ImageSource = new BitmapImage(new Uri(imagePath));
-                        Gumb6.Background = imageBrush;
-                    }
-                    else if (Gumb6.Tag == "7" || Gumb6.Tag == "flag7")
-                    {
-                        Gumb6.Tag = "7clicked";
-                        string imagePath = "ms-appx:///Assets/7.png";
-                        ImageBrush imageBrush = new ImageBrush();
-                        imageBrush.ImageSource = new BitmapImage(new Uri(imagePath));
-                        Gumb6.Background = imageBrush;
-                    }
-                    else if (Gumb6.Tag == "8" || Gumb6.Tag == "flag8")
-                    {
-                        Gumb6.Tag = "8clicked";
-                        string imagePath = "ms-appx:///Assets/8.png";
-                        ImageBrush imageBrush = new ImageBrush();
-                        imageBrush.ImageSource = new BitmapImage(new Uri(imagePath));
-                        Gumb6.Background = imageBrush;
+                        if (Gumb6.Tag == "flag" || Gumb6.Tag == "clear")
+                        {
+                            Gumb6.Tag = "clicked";
+                            string imagePath = "ms-appx:///Assets/tileclicked.png";
+                            ImageBrush imageBrush = new ImageBrush();
+                            imageBrush.ImageSource = new BitmapImage(new Uri(imagePath));
+                            Gumb6.Background = imageBrush;
+                            AdvanceField(Gumb6);
+                        }
+                        else if (Gumb6.Tag == "1" || Gumb6.Tag == "flag1")
+                        {
+                            Gumb6.Tag = "1clicked";
+                            string imagePath = "ms-appx:///Assets/1.png";
+                            ImageBrush imageBrush = new ImageBrush();
+                            imageBrush.ImageSource = new BitmapImage(new Uri(imagePath));
+                            Gumb6.Background = imageBrush;
+                        }
+                        else if (Gumb6.Tag == "2" || Gumb6.Tag == "flag2")
+                        {
+                            Gumb6.Tag = "2clicked";
+                            string imagePath = "ms-appx:///Assets/2.png";
+                            ImageBrush imageBrush = new ImageBrush();
+                            imageBrush.ImageSource = new BitmapImage(new Uri(imagePath));
+                            Gumb6.Background = imageBrush;
+                        }
+                        else if (Gumb6.Tag == "3" || Gumb6.Tag == "flag3")
+                        {
+                            Gumb6.Tag = "3clicked";
+                            string imagePath = "ms-appx:///Assets/3.png";
+                            ImageBrush imageBrush = new ImageBrush();
+                            imageBrush.ImageSource = new BitmapImage(new Uri(imagePath));
+                            Gumb6.Background = imageBrush;
+                        }
+                        else if (Gumb6.Tag == "4" || Gumb6.Tag == "flag4")
+                        {
+                            Gumb6.Tag = "4clicked";
+                            string imagePath = "ms-appx:///Assets/4.png";
+                            ImageBrush imageBrush = new ImageBrush();
+                            imageBrush.ImageSource = new BitmapImage(new Uri(imagePath));
+                            Gumb6.Background = imageBrush;
+                        }
+                        else if (Gumb6.Tag == "5" || Gumb6.Tag == "flag5")
+                        {
+                            Gumb6.Tag = "5clicked";
+                            string imagePath = "ms-appx:///Assets/5.png";
+                            ImageBrush imageBrush = new ImageBrush();
+                            imageBrush.ImageSource = new BitmapImage(new Uri(imagePath));
+                            Gumb6.Background = imageBrush;
+                        }
+                        else if (Gumb6.Tag == "6" || Gumb6.Tag == "flag6")
+                        {
+                            Gumb6.Tag = "6clicked";
+                            string imagePath = "ms-appx:///Assets/6.png";
+                            ImageBrush imageBrush = new ImageBrush();
+                            imageBrush.ImageSource = new BitmapImage(new Uri(imagePath));
+                            Gumb6.Background = imageBrush;
+                        }
+                        else if (Gumb6.Tag == "7" || Gumb6.Tag == "flag7")
+                        {
+                            Gumb6.Tag = "7clicked";
+                            string imagePath = "ms-appx:///Assets/7.png";
+                            ImageBrush imageBrush = new ImageBrush();
+                            imageBrush.ImageSource = new BitmapImage(new Uri(imagePath));
+                            Gumb6.Background = imageBrush;
+                        }
+                        else if (Gumb6.Tag == "8" || Gumb6.Tag == "flag8")
+                        {
+                            Gumb6.Tag = "8clicked";
+                            string imagePath = "ms-appx:///Assets/8.png";
+                            ImageBrush imageBrush = new ImageBrush();
+                            imageBrush.ImageSource = new BitmapImage(new Uri(imagePath));
+                            Gumb6.Background = imageBrush;
+                        }
                     }
                 }
                 if (Gumb7 != null)
@@ -1223,80 +1225,83 @@ namespace Projektni
                         Gumb7.Background = imageBrush;
                     }
                 }
-                if (Gumb8 != null)
+                if (i != 16 && i != 32 && i != 48 && i != 64 && i != 80 && i != 96 && i != 112 && i != 128 && i != 144 && i != 160 && i != 176 && i != 192 && i != 208 && i != 224 && i != 240 && i != 256)
                 {
-                    if (Gumb8.Tag == "flag" || Gumb8.Tag == "clear")
+                    if (Gumb8 != null)
                     {
-                        Gumb8.Tag = "clicked";
-                        string imagePath = "ms-appx:///Assets/tileclicked.png";
-                        ImageBrush imageBrush = new ImageBrush();
-                        imageBrush.ImageSource = new BitmapImage(new Uri(imagePath));
-                        Gumb8.Background = imageBrush;
-                        AdvanceField(Gumb8);
-                    }
-                    else if (Gumb8.Tag == "1" || Gumb8.Tag == "flag1")
-                    {
-                        Gumb8.Tag = "1clicked";
-                        string imagePath = "ms-appx:///Assets/1.png";
-                        ImageBrush imageBrush = new ImageBrush();
-                        imageBrush.ImageSource = new BitmapImage(new Uri(imagePath));
-                        Gumb8.Background = imageBrush;
-                    }
-                    else if (Gumb8.Tag == "2" || Gumb8.Tag == "flag2")
-                    {
-                        Gumb8.Tag = "2clicked";
-                        string imagePath = "ms-appx:///Assets/2.png";
-                        ImageBrush imageBrush = new ImageBrush();
-                        imageBrush.ImageSource = new BitmapImage(new Uri(imagePath));
-                        Gumb8.Background = imageBrush;
-                    }
-                    else if (Gumb8.Tag == "3" || Gumb8.Tag == "flag3")
-                    {
-                        Gumb8.Tag = "3clicked";
-                        string imagePath = "ms-appx:///Assets/3.png";
-                        ImageBrush imageBrush = new ImageBrush();
-                        imageBrush.ImageSource = new BitmapImage(new Uri(imagePath));
-                        Gumb8.Background = imageBrush;
-                    }
-                    else if (Gumb8.Tag == "4" || Gumb8.Tag == "flag4")
-                    {
-                        Gumb8.Tag = "4clicked";
-                        string imagePath = "ms-appx:///Assets/4.png";
-                        ImageBrush imageBrush = new ImageBrush();
-                        imageBrush.ImageSource = new BitmapImage(new Uri(imagePath));
-                        Gumb8.Background = imageBrush;
-                    }
-                    else if (Gumb8.Tag == "5" || Gumb8.Tag == "flag5")
-                    {
-                        Gumb8.Tag = "5clicked";
-                        string imagePath = "ms-appx:///Assets/5.png";
-                        ImageBrush imageBrush = new ImageBrush();
-                        imageBrush.ImageSource = new BitmapImage(new Uri(imagePath));
-                        Gumb8.Background = imageBrush;
-                    }
-                    else if (Gumb8.Tag == "6" || Gumb8.Tag == "flag6")
-                    {
-                        Gumb8.Tag = "6clicked";
-                        string imagePath = "ms-appx:///Assets/6.png";
-                        ImageBrush imageBrush = new ImageBrush();
-                        imageBrush.ImageSource = new BitmapImage(new Uri(imagePath));
-                        Gumb8.Background = imageBrush;
-                    }
-                    else if (Gumb8.Tag == "7" || Gumb8.Tag == "flag7")
-                    {
-                        Gumb8.Tag = "7clicked";
-                        string imagePath = "ms-appx:///Assets/7.png";
-                        ImageBrush imageBrush = new ImageBrush();
-                        imageBrush.ImageSource = new BitmapImage(new Uri(imagePath));
-                        Gumb8.Background = imageBrush;
-                    }
-                    else if (Gumb8.Tag == "8" || Gumb8.Tag == "flag8")
-                    {
-                        Gumb8.Tag = "8clicked";
-                        string imagePath = "ms-appx:///Assets/8.png";
-                        ImageBrush imageBrush = new ImageBrush();
-                        imageBrush.ImageSource = new BitmapImage(new Uri(imagePath));
-                        Gumb8.Background = imageBrush;
+                        if (Gumb8.Tag == "flag" || Gumb8.Tag == "clear")
+                        {
+                            Gumb8.Tag = "clicked";
+                            string imagePath = "ms-appx:///Assets/tileclicked.png";
+                            ImageBrush imageBrush = new ImageBrush();
+                            imageBrush.ImageSource = new BitmapImage(new Uri(imagePath));
+                            Gumb8.Background = imageBrush;
+                            AdvanceField(Gumb8);
+                        }
+                        else if (Gumb8.Tag == "1" || Gumb8.Tag == "flag1")
+                        {
+                            Gumb8.Tag = "1clicked";
+                            string imagePath = "ms-appx:///Assets/1.png";
+                            ImageBrush imageBrush = new ImageBrush();
+                            imageBrush.ImageSource = new BitmapImage(new Uri(imagePath));
+                            Gumb8.Background = imageBrush;
+                        }
+                        else if (Gumb8.Tag == "2" || Gumb8.Tag == "flag2")
+                        {
+                            Gumb8.Tag = "2clicked";
+                            string imagePath = "ms-appx:///Assets/2.png";
+                            ImageBrush imageBrush = new ImageBrush();
+                            imageBrush.ImageSource = new BitmapImage(new Uri(imagePath));
+                            Gumb8.Background = imageBrush;
+                        }
+                        else if (Gumb8.Tag == "3" || Gumb8.Tag == "flag3")
+                        {
+                            Gumb8.Tag = "3clicked";
+                            string imagePath = "ms-appx:///Assets/3.png";
+                            ImageBrush imageBrush = new ImageBrush();
+                            imageBrush.ImageSource = new BitmapImage(new Uri(imagePath));
+                            Gumb8.Background = imageBrush;
+                        }
+                        else if (Gumb8.Tag == "4" || Gumb8.Tag == "flag4")
+                        {
+                            Gumb8.Tag = "4clicked";
+                            string imagePath = "ms-appx:///Assets/4.png";
+                            ImageBrush imageBrush = new ImageBrush();
+                            imageBrush.ImageSource = new BitmapImage(new Uri(imagePath));
+                            Gumb8.Background = imageBrush;
+                        }
+                        else if (Gumb8.Tag == "5" || Gumb8.Tag == "flag5")
+                        {
+                            Gumb8.Tag = "5clicked";
+                            string imagePath = "ms-appx:///Assets/5.png";
+                            ImageBrush imageBrush = new ImageBrush();
+                            imageBrush.ImageSource = new BitmapImage(new Uri(imagePath));
+                            Gumb8.Background = imageBrush;
+                        }
+                        else if (Gumb8.Tag == "6" || Gumb8.Tag == "flag6")
+                        {
+                            Gumb8.Tag = "6clicked";
+                            string imagePath = "ms-appx:///Assets/6.png";
+                            ImageBrush imageBrush = new ImageBrush();
+                            imageBrush.ImageSource = new BitmapImage(new Uri(imagePath));
+                            Gumb8.Background = imageBrush;
+                        }
+                        else if (Gumb8.Tag == "7" || Gumb8.Tag == "flag7")
+                        {
+                            Gumb8.Tag = "7clicked";
+                            string imagePath = "ms-appx:///Assets/7.png";
+                            ImageBrush imageBrush = new ImageBrush();
+                            imageBrush.ImageSource = new BitmapImage(new Uri(imagePath));
+                            Gumb8.Background = imageBrush;
+                        }
+                        else if (Gumb8.Tag == "8" || Gumb8.Tag == "flag8")
+                        {
+                            Gumb8.Tag = "8clicked";
+                            string imagePath = "ms-appx:///Assets/8.png";
+                            ImageBrush imageBrush = new ImageBrush();
+                            imageBrush.ImageSource = new BitmapImage(new Uri(imagePath));
+                            Gumb8.Background = imageBrush;
+                        }
                     }
                 }
             }

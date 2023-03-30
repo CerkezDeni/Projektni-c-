@@ -332,7 +332,10 @@ namespace Projektni
                 }
             });
             timeraaa.FontSize = 100;
-            timeraaa.Text = "nigga💀";
+            if(min==60)
+            {
+                timeraaa.Text = "nigga💀";
+            }
         }
         private void Button_PointerPressed(object sender, PointerRoutedEventArgs e)
         {

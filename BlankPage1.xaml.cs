@@ -22,6 +22,8 @@ namespace Projektni
 {
     public sealed partial class BlankPage1 : Page
     {
+        string ImeIgraca;
+        bool destroy = false;
         bool endgame = false;
         List<int> randomNumbers;
         int numbah;
@@ -34,13 +36,14 @@ namespace Projektni
             Spawnajmine();
             SweeperStatus();
             GenerateNumbersGrid();
+            ImeIgraca = Windows.Storage.ApplicationData.Current.LocalSettings.Values["ImeIgraca"] as string;
         }
-
         private void GenerateNumbersGrid()
         {
 
             for (int i = 1; i <= 256; i++)
             {
+
                 int zbroj = 0;
                 string GumbIme = "Gumb" + i;
                 Button Gumbara = FindName(GumbIme) as Button;
@@ -275,7 +278,6 @@ namespace Projektni
             string csec = "err";
             string dmin = "err";
             bool e = false;
-            bool destroy= false;
             await Task.Run(async () =>
             {
                 
@@ -582,7 +584,11 @@ namespace Projektni
                         imageBrushnig.ImageSource = new BitmapImage(new Uri(imagePathnig));
                         pressedButton.Background = imageBrushnig;
                         endgame = true;
-                        //dovrsi kasnije
+                        destroy = true;
+                        //ovdje ti je sve đeljana
+                        //ImeIgraca <- ime igraca (objasnjavam ako si retardiran slucajno)
+                        //timeraaa.Text <- vrijeme (objasnjavam ako si retardiran slucajno)
+
                     }
                     else
                     {
@@ -664,7 +670,7 @@ namespace Projektni
                 }
             }
         }
-        //bug treba fixat
+
         private void AdvanceField(Button Gumb)
         {
             int i = GetButtonNumber(Gumb.Name);

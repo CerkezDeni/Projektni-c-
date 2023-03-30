@@ -7,13 +7,13 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    
 
     <Grid>
-        <TextBox Margin="600,430,600,574" TextWrapping="Wrap" Text="" FontSize="48" TextAlignment="Center" InputScope="Default" PlaceholderText="Unesi ime igrača" BorderBrush="#66FFFFFF" Foreground="#FF001BFF" CornerRadius="20"/>
+        <TextBox x:Name="KutijaIme" Margin="600,430,600,574" TextWrapping="Wrap" Text="" FontSize="48" TextAlignment="Center" InputScope="Default" PlaceholderText="Unesi ime igrača" BorderThickness="3" BorderBrush="White" Foreground="Black" CornerRadius="20" Background="#66FFFFFF"/>
         <Button Content="Nova igra" Margin="740,569,740,421" VerticalAlignment="Stretch" Click="Button_Click" HorizontalAlignment="Stretch" FontSize="48" Background="#33FFFFFF" BorderBrush="White" FocusVisualPrimaryBrush="Black" Foreground="White" CornerRadius="20"/>
-        <Button Content="Nastavi igru" Margin="740,700,740,290" VerticalAlignment="Stretch" Click="Button_Click_1" HorizontalAlignment="Stretch" RenderTransformOrigin="0.66,0.411" FontSize="48" Background="#33FFFFFF" Foreground="White" BorderBrush="White" CornerRadius="20"/>
-        <Button Content="Ljestvica uspjeha" Margin="740,830,740,160" VerticalAlignment="Stretch" Click="Button_Click_2" HorizontalAlignment="Stretch" FontSize="48" Background="#33FFFFFF" Foreground="White" BorderBrush="White" CornerRadius="20"/>
-        <TextBlock HorizontalAlignment="Left" Margin="643,162,0,0" TextWrapping="Wrap" Text="MINOLOVAC" VerticalAlignment="Top" Height="175" Width="674" FontSize="140" FontFamily="Impact" FocusVisualPrimaryBrush="Black">
+        <Button Content="Ljestvica uspjeha" Margin="738,698,742,292" VerticalAlignment="Stretch" Click="Button_Click_2" HorizontalAlignment="Stretch" FontSize="48" Background="#33FFFFFF" Foreground="White" BorderBrush="White" CornerRadius="20"/>
+        <TextBlock x:Name="Naslov" HorizontalAlignment="Left" Margin="643,162,0,0" TextWrapping="Wrap" Text="MINOLOVAC" VerticalAlignment="Top" Height="175" Width="674" FontSize="140" FontFamily="Impact">
             <TextBlock.Foreground>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Black" Offset="0"/>
@@ -21,7 +21,7 @@
                 </LinearGradientBrush>
             </TextBlock.Foreground>
         </TextBlock>
-        <Button Content="Izađi iz igre" Margin="740,959,740,31" VerticalAlignment="Stretch" Click="Button_Click_3" HorizontalAlignment="Stretch" FontSize="48" Background="#33FFFFFF" Foreground="White" BorderBrush="White" CornerRadius="20"/>
+        <Button Content="Izađi iz igre" Margin="738,827,742,163" VerticalAlignment="Stretch" Click="Button_Click_3" HorizontalAlignment="Stretch" FontSize="48" Background="#33FFFFFF" Foreground="White" BorderBrush="White" CornerRadius="20"/>
         <Grid.Background>
             <ImageBrush Stretch="Fill" ImageSource="Assets/pozadina1.jpeg"/>
         </Grid.Background>

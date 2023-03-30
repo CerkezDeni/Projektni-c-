@@ -88,7 +88,7 @@ namespace Projektni
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-            //liderbord
+            this.Frame.Navigate(typeof(Leaderboard));
         }
 
         private void Button_Click_3(object sender, RoutedEventArgs e)

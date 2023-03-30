@@ -17,7 +17,8 @@ using System.Threading.Tasks;
 using Windows.System.Threading;
 using Windows.UI.Xaml.Media.Imaging;
 using Windows.Media.Playback;
-using Windows.Media.Core;
+using DataAccessLibrary;
+using System.ServiceModel.Channels;
 
 namespace Projektni
 {
@@ -28,16 +29,9 @@ namespace Projektni
         bool endgame = false;
         List<int> randomNumbers;
         int numbah;
-        private MediaPlayer mediaPlayer;
         public BlankPage1()
         {
             this.InitializeComponent();
-            //dddddddddd
-            this.InitializeComponent();
-            mediaPlayer = new MediaPlayer();
-            mediaPlayer.Source = MediaSource.CreateFromUri(new Uri("ms-appx:///Assets/smece.mp3"));
-            mediaPlayer.Play();
-            //gggggggggg
             CreateBackgroundThread();
             SetImageForAllButtons();
             randomNumbers = GenerateRandomNumbers();
@@ -96,7 +90,7 @@ namespace Projektni
                 Button Gumb8 = (Button)FindName("Gumb" + (i + 17).ToString());
                 if(Gumbara.Tag != "bombara")
                 {
-                    if (Gumb1 != null && Gumb1.Tag == "bombara" && i != 1 && i != 17 && i != 33 && i != 49 && i != 65 && i != 81 && i != 97 && i != 113 && i != 129 && i != 145 && i != 161 && i != 177 && i != 193 && i != 209 && i != 225 && i != 241)
+                    if (Gumb1 != null && Gumb1.Tag == "bombara")
                     {
                         zbroj++;
                     }
@@ -104,19 +98,19 @@ namespace Projektni
                     {
                         zbroj++;
                     }
-                    if (Gumb3 != null && Gumb3.Tag == "bombara" && i != 16 && i != 32 && i != 48 && i != 64 && i != 80 && i != 96 && i != 112 && i != 128 && i != 144 && i != 160 && i != 176 && i != 192 && i != 208 && i != 224 && i != 240 && i != 256)
+                    if (Gumb3 != null && Gumb3.Tag == "bombara")
                     {
                         zbroj++;
                     }
-                    if (Gumb4 != null && Gumb4.Tag == "bombara" && i != 1 && i != 17 && i != 33 && i != 49 && i != 65 && i != 81 && i != 97 && i != 113 && i != 129 && i != 145 && i != 161 && i != 177 && i != 193 && i != 209 && i != 225 && i != 241)
+                    if (Gumb4 != null && Gumb4.Tag == "bombara")
                     {
                         zbroj++;
                     }
-                    if (Gumb5 != null && Gumb5.Tag == "bombara" && i != 16 && i != 32 && i != 48 && i != 64 && i != 80 && i != 96 && i != 112 && i != 128 && i != 144 && i != 160 && i != 176 && i != 192 && i != 208 && i != 224 && i != 240 && i != 256)
+                    if (Gumb5 != null && Gumb5.Tag == "bombara")
                     {
                         zbroj++;
                     }
-                    if (Gumb6 != null && Gumb6.Tag == "bombara" && i != 1 && i != 17 && i != 33 && i != 49 && i != 65 && i != 81 && i != 97 && i != 113 && i != 129 && i != 145 && i != 161 && i != 177 && i != 193 && i != 209 && i != 225 && i != 241)
+                    if (Gumb6 != null && Gumb6.Tag == "bombara")
                     {
                         zbroj++;
                     }
@@ -124,7 +118,7 @@ namespace Projektni
                     {
                         zbroj++;
                     }
-                    if (Gumb8 != null && Gumb8.Tag == "bombara" && i != 16 && i != 32 && i != 48 && i != 64 && i != 80 && i != 96 && i != 112 && i != 128 && i != 144 && i != 160 && i != 176 && i != 192 && i != 208 && i != 224 && i != 240 && i != 256)
+                    if (Gumb8 != null && Gumb8.Tag == "bombara")
                     {
                         zbroj++;
                     }
@@ -225,90 +219,90 @@ namespace Projektni
 
         private void SweeperStatus()
         {
-            if (endgame != true)
+            string stringy;
+            int giganigga = 0;
+            for (int i = 1; i <= 256; i++)
             {
-                int giganigga = 0;
-                for (int i = 1; i <= 256; i++)
+                string buttonName3 = "Gumb" + i;
+                Button gumb66 = FindName(buttonName3) as Button;
+                if (gumb66.Tag == "flag" || gumb66.Tag == "flagandbombara")
                 {
-                    string buttonName3 = "Gumb" + i;
-                    Button gumb66 = FindName(buttonName3) as Button;
-                    if (gumb66.Tag == "flag" || gumb66.Tag == "flagandbombara" || gumb66.Tag == "flag1" || gumb66.Tag == "flag2" || gumb66.Tag == "flag3" || gumb66.Tag == "flag4" || gumb66.Tag == "flag5" || gumb66.Tag == "flag6" || gumb66.Tag == "flag7" || gumb66.Tag == "flag8")
-                    {
-                        giganigga++;
-                    }
-                }
-                numbah = 40 - giganigga;
-                flagnumberdisplay.Text = numbah.ToString();
-                switch (giganigga)
-                {
-                    case 0:
-                        string imagePath = "ms-appx:///Assets/smiley.png";
-                        ImageBrush imageBrush = new ImageBrush();
-                        imageBrush.ImageSource = new BitmapImage(new Uri(imagePath));
-                        Status.Background = imageBrush;
-                        break;
-                    case 1:
-                        string imagePath1 = "ms-appx:///Assets/smiley1.png";
-                        ImageBrush imageBrush1 = new ImageBrush();
-                        imageBrush1.ImageSource = new BitmapImage(new Uri(imagePath1));
-                        Status.Background = imageBrush1;
-                        break;
-                    case 2:
-                        string imagePath2 = "ms-appx:///Assets/smiley2.png";
-                        ImageBrush imageBrush2 = new ImageBrush();
-                        imageBrush2.ImageSource = new BitmapImage(new Uri(imagePath2));
-                        Status.Background = imageBrush2;
-                        break;
-                    case 3:
-                        string imagePath3 = "ms-appx:///Assets/smiley3.png";
-                        ImageBrush imageBrush3 = new ImageBrush();
-                        imageBrush3.ImageSource = new BitmapImage(new Uri(imagePath3));
-                        Status.Background = imageBrush3;
-                        break;
-                    case 4:
-                        string imagePath4 = "ms-appx:///Assets/smiley4.png";
-                        ImageBrush imageBrush4 = new ImageBrush();
-                        imageBrush4.ImageSource = new BitmapImage(new Uri(imagePath4));
-                        Status.Background = imageBrush4;
-                        break;
-                    case 5:
-                        string imagePath5 = "ms-appx:///Assets/smiley5.png";
-                        ImageBrush imageBrush5 = new ImageBrush();
-                        imageBrush5.ImageSource = new BitmapImage(new Uri(imagePath5));
-                        Status.Background = imageBrush5;
-                        break;
-                    case 6:
-                        string imagePath6 = "ms-appx:///Assets/smiley6.png";
-                        ImageBrush imageBrush6 = new ImageBrush();
-                        imageBrush6.ImageSource = new BitmapImage(new Uri(imagePath6));
-                        Status.Background = imageBrush6;
-                        break;
-                    case 7:
-                        string imagePath7 = "ms-appx:///Assets/smiley7.png";
-                        ImageBrush imageBrush7 = new ImageBrush();
-                        imageBrush7.ImageSource = new BitmapImage(new Uri(imagePath7));
-                        Status.Background = imageBrush7;
-                        break;
-                    case 8:
-                        string imagePath8 = "ms-appx:///Assets/smiley8.png";
-                        ImageBrush imageBrush8 = new ImageBrush();
-                        imageBrush8.ImageSource = new BitmapImage(new Uri(imagePath8));
-                        Status.Background = imageBrush8;
-                        break;
-                    case 9:
-                        string imagePath9 = "ms-appx:///Assets/smiley9.png";
-                        ImageBrush imageBrush9 = new ImageBrush();
-                        imageBrush9.ImageSource = new BitmapImage(new Uri(imagePath9));
-                        Status.Background = imageBrush9;
-                        break;
-                    default:
-                        string imagePath10 = "ms-appx:///Assets/smiley9.png";
-                        ImageBrush imageBrush10 = new ImageBrush();
-                        imageBrush10.ImageSource = new BitmapImage(new Uri(imagePath10));
-                        Status.Background = imageBrush10;
-                        break;
+                    giganigga++;
                 }
             }
+            numbah = 40 - giganigga;
+            flagnumberdisplay.Text = numbah.ToString();
+            switch (giganigga)
+            {
+                case 0:
+                    string imagePath = "ms-appx:///Assets/smiley.png";
+                    ImageBrush imageBrush = new ImageBrush();
+                    imageBrush.ImageSource = new BitmapImage(new Uri(imagePath));
+                    Status.Background = imageBrush;
+                    break;
+                case 1:
+                    string imagePath1 = "ms-appx:///Assets/smiley1.png";
+                    ImageBrush imageBrush1 = new ImageBrush();
+                    imageBrush1.ImageSource = new BitmapImage(new Uri(imagePath1));
+                    Status.Background = imageBrush1;
+                    break;
+                case 2:
+                    string imagePath2 = "ms-appx:///Assets/smiley2.png";
+                    ImageBrush imageBrush2 = new ImageBrush();
+                    imageBrush2.ImageSource = new BitmapImage(new Uri(imagePath2));
+                    Status.Background = imageBrush2;
+                    break;
+                case 3:
+                    string imagePath3 = "ms-appx:///Assets/smiley3.png";
+                    ImageBrush imageBrush3 = new ImageBrush();
+                    imageBrush3.ImageSource = new BitmapImage(new Uri(imagePath3));
+                    Status.Background = imageBrush3;
+                    break;
+                case 4:
+                    string imagePath4 = "ms-appx:///Assets/smiley4.png";
+                    ImageBrush imageBrush4 = new ImageBrush();
+                    imageBrush4.ImageSource = new BitmapImage(new Uri(imagePath4));
+                    Status.Background = imageBrush4;
+                    break;
+                case 5:
+                    string imagePath5 = "ms-appx:///Assets/smiley5.png";
+                    ImageBrush imageBrush5 = new ImageBrush();
+                    imageBrush5.ImageSource = new BitmapImage(new Uri(imagePath5));
+                    Status.Background = imageBrush5;
+                    break;
+                case 6:
+                    string imagePath6 = "ms-appx:///Assets/smiley6.png";
+                    ImageBrush imageBrush6 = new ImageBrush();
+                    imageBrush6.ImageSource = new BitmapImage(new Uri(imagePath6));
+                    Status.Background = imageBrush6;
+                    break;
+                case 7:
+                    string imagePath7 = "ms-appx:///Assets/smiley7.png";
+                    ImageBrush imageBrush7 = new ImageBrush();
+                    imageBrush7.ImageSource = new BitmapImage(new Uri(imagePath7));
+                    Status.Background = imageBrush7;
+                    break;
+                case 8:
+                    string imagePath8 = "ms-appx:///Assets/smiley8.png";
+                    ImageBrush imageBrush8 = new ImageBrush();
+                    imageBrush8.ImageSource = new BitmapImage(new Uri(imagePath8));
+                    Status.Background = imageBrush8;
+                    break;
+                case 9:
+                    string imagePath9 = "ms-appx:///Assets/smiley9.png";
+                    ImageBrush imageBrush9 = new ImageBrush();
+                    imageBrush9.ImageSource = new BitmapImage(new Uri(imagePath9));
+                    Status.Background = imageBrush9;
+                    break;
+               default:
+                    string imagePath10 = "ms-appx:///Assets/smiley9.png";
+                    ImageBrush imageBrush10 = new ImageBrush();
+                    imageBrush10.ImageSource = new BitmapImage(new Uri(imagePath10));
+                    Status.Background = imageBrush10;
+                    break;
+            }
+
+
         }
         private async void CreateBackgroundThread()
         {
@@ -362,11 +356,7 @@ namespace Projektni
                     await Task.Delay(1000);
                 }
             });
-            timeraaa.FontSize = 100;
-            if(min==60)
-            {
-                timeraaa.Text = "nigga💀";
-            }
+
         }
         private void Button_PointerPressed(object sender, PointerRoutedEventArgs e)
         {
@@ -627,14 +617,13 @@ namespace Projektni
                         pressedButton.Background = imageBrushnig;
                         endgame = true;
                         destroy = true;
-                        string Stat = "ms-appx:///Assets/death.png";
-                        ImageBrush Stat2 = new ImageBrush();
-                        Stat2.ImageSource = new BitmapImage(new Uri(Stat));
-                        Status.Background = Stat2;
                         //ovdje ti je sve đeljana
                         //ImeIgraca <- ime igraca (objasnjavam ako si retardiran slucajno)
                         //timeraaa.Text <- vrijeme (objasnjavam ako si retardiran slucajno)
 
+                        
+                        DataAccess.AddToTable(ImeIgraca, timeraaa.Text);
+                      
                     }
                     else
                     {
@@ -1380,11 +1369,6 @@ namespace Projektni
                 return buttonNumber;
             }
             return 0;
-        }
-
-        private void Status_Click(object sender, RoutedEventArgs e)
-        {
-            this.Frame.Navigate(this.GetType());
         }
     }
 }
